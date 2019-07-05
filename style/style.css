@@ -33,6 +33,7 @@
 }
 
 .menubar span {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +79,12 @@
           align-items: center;
 }
 
+.userphoto img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
 .userphoto div {
   border-radius: 50%;
   background-color: #fff;
@@ -107,8 +114,25 @@
   font-size: 50px;
 }
 
+.relative {
+  position: relative;
+  background-color: #f7f7f7;
+}
+
+.editcontent {
+  z-index: 9;
+  height: calc( 100% - 100px);
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: block;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .editcontent > div {
-  margin: 50px 30px 0;
+  padding: 50px 30px 0;
 }
 
 .grid {
@@ -221,6 +245,7 @@
 }
 
 .mainiput .buttonarea span {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,13 +297,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .mainiput .buttonarea s.active {
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
   left: 50%;
 }
 
@@ -341,7 +366,7 @@
 
 .product {
   background-color: #fff;
-  padding: 20px 25px;
+  padding: 20px 30px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 6px grey;
           box-shadow: 0px 0px 6px grey;
@@ -384,6 +409,13 @@
           align-items: center;
 }
 
+.productgrid .disable {
+  display: none;
+  font-size: 12px;
+  color: #505050;
+  width: 120px;
+}
+
 .productgrid p, .productgrid span {
   margin: 0;
   font-size: 12px;
@@ -397,7 +429,12 @@
           align-items: center;
 }
 
+.productgrid .pl {
+  padding-left: 5px;
+}
+
 .productgrid input {
+  padding-left: 5px;
   height: 30px;
   width: 120px;
   border: 0;
@@ -409,6 +446,7 @@
 }
 
 .productinfotop {
+  position: relative;
   -ms-grid-rows: 20px;
       grid-template-rows: 20px;
   padding-bottom: 10px;
@@ -418,6 +456,19 @@
 .productinfotop p {
   color: #24253d;
   font-size: 16px;
+}
+
+.productinfotop i {
+  width: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  position: absolute;
+  right: 0;
 }
 
 .productbutton {
@@ -472,12 +523,31 @@
   cursor: pointer;
 }
 
-.number .plus {
+.number .icon-plus-sign-in-a-black-circle {
   left: 0px;
 }
 
-.number .mins {
+.number .icon-plus-sign-in-a-black-circle::before {
+  color: #e0e0e1;
+}
+
+.number .icon-plus-sign-in-a-black-circle.hover::before {
+  color: #fd5739;
+}
+
+.number .icon-mines {
   right: 0px;
+}
+
+.number .icon-mines.hover .path1::before {
+  color: #fd5739;
+}
+
+.number .path2 {
+  top: 8px;
+  font-size: 16px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .number input {
@@ -488,7 +558,7 @@
   position: relative;
   width: 400px;
   height: 100%;
-  margin-left: 15px;
+  margin-left: 35px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,11 +567,14 @@
 
 .productcontent > div {
   margin-right: 5px;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 
 .productcontent .icon-plus-sign-in-a-black-circle {
+  cursor: pointer;
   position: absolute;
-  right: -25px;
+  right: -20px;
   font-size: 18px;
 }
 
@@ -511,7 +584,6 @@
 
 .imgbox {
   height: 88px;
-  width: 130px;
   background-color: orange;
 }
 
@@ -524,8 +596,12 @@
   outline: 1px solid #ececec;
 }
 
+.productbox.active {
+  outline-width: 2px;
+  outline-color: red;
+}
+
 .contentbox {
-  width: 130px;
   margin-bottom: 10px;
   padding: 15px 10px;
 }
@@ -556,7 +632,7 @@
 .game {
   margin-top: 30px;
   background-color: #fff;
-  padding: 20px 25px;
+  padding: 20px 35px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 6px grey;
           box-shadow: 0px 0px 6px grey;
@@ -583,11 +659,23 @@
 }
 
 .gameready span {
+  display: block;
+  text-align: center;
+  width: 50px;
   color: #fff;
   font-size: 12px;
-  padding: 2px 8px;
+  padding: 0px;
   border-radius: 50px;
   background-color: #ff0000;
+}
+
+.gameready .live {
+  background-color: #ff9620;
+}
+
+.gameready .end {
+  background-color: #cec9c9;
+  color: black;
 }
 
 .gameready div {
@@ -674,11 +762,16 @@
   visibility: hidden;
 }
 
+.gamewidth {
+  width: 640px;
+}
+
 .gamecontent {
   position: relative;
 }
 
 .gamecontent > span {
+  cursor: pointer;
   position: absolute;
   right: -15px;
   font-size: 18px;
@@ -699,6 +792,7 @@
 }
 
 .mainbutton div {
+  cursor: pointer;
   font-size: 18px;
   text-align: center;
   padding: 20px 55px;
@@ -852,6 +946,7 @@
 }
 
 .strat .stratbutton div {
+  cursor: pointer;
   margin: 3px;
   font-size: 18px;
   color: #fff;
@@ -876,6 +971,7 @@
 }
 
 .gamemodeltitle select {
+  margin-top: 6px;
   border: 0;
   outline: 0;
   background-color: #ececec;
@@ -913,5 +1009,464 @@
 
 .gamebutton > div:nth-last-of-type(1) {
   background-color: #ff0000;
+}
+
+.t1, .t4 {
+  cursor: pointer;
+  top: 45%;
+  z-index: 9;
+  position: absolute;
+  right: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 15px;
+  border-color: transparent transparent transparent #909090;
+}
+
+.t4 {
+  right: -22px;
+}
+
+.t2, .t3 {
+  cursor: pointer;
+  top: 45%;
+  z-index: 9;
+  position: absolute;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 15px 7.5px 0px;
+  border-color: transparent  #909090 transparent  transparent;
+}
+
+.swiper-button-disabled {
+  visibility: hidden;
+}
+
+.gamecontentbase span {
+  display: block;
+  font-family: PingFangTC;
+  font-size: 14px;
+  color: #505050;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.43);
+}
+
+.gamecontentbase .option {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px 1fr;
+      grid-template-columns: 80px 1fr;
+  margin-bottom: 6px;
+}
+
+.gamecontentbase .option p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  margin: 0;
+  color: #505050;
+}
+
+.gamecontentbase .option input {
+  border: 0;
+  outline: 0;
+  background-color: #ececec;
+  font-size: 12px;
+  color: #505050;
+  padding: 10px;
+}
+
+.gamecontentbase .gametext p {
+  font-size: 14px;
+  color: #505050;
+  margin-bottom: 5px;
+}
+
+.gamecontentbase .gametext textarea {
+  resize: none;
+  background-color: #ececec;
+  font-size: 12px;
+  color: #000000;
+  padding: 15px 20px;
+  height: 70px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+
+.gamecontentbase .emotion {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 7px;
+  grid-column-gap: 45px;
+}
+
+.gamecontentbase .emotion div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gamecontentbase .emotion div input {
+  width: 100%;
+  margin-left: 10px;
+  border: 0;
+  outline: 0;
+  background-color: #ececec;
+  font-size: 12px;
+  color: #505050;
+  padding: 10px;
+}
+
+.gamecontentbase .emotion div img {
+  height: 23px;
+  width: 23px;
+  margin-right: 12px;
+}
+
+.gamecontent_1, .gamecontent_2, .gamecontent_3, .gamecontent_4 {
+  display: none;
+}
+
+.mr {
+  margin-right: 6px;
+}
+
+.container {
+  max-width: 1350px;
+}
+
+.icon-pencil, .icon-cancel-button {
+  cursor: pointer;
+}
+
+.livebutton {
+  display: none;
+}
+
+.fbcontent {
+  background-color: #fff;
+  padding-top: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 50px;
+      grid-template-rows: 1fr 50px;
+}
+
+.fbcontent .fbgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 185px;
+      grid-template-columns: 1fr 185px;
+}
+
+.fbcontent .fbiframe {
+  width: 100%;
+}
+
+.fbcontent .fborder p {
+  font-size: 12px;
+  color: #24253d;
+}
+
+.fbheadphote {
+  margin: 0 10px 0 25px;
+  height: 36px;
+  width: 36px;
+}
+
+.fbheadphote img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.fbmessage {
+  height: 50px;
+  width: 100%;
+  background-color: #e0e2e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fbmessage .message {
+  padding: 6px 25px;
+  font-size: 12px;
+  color: #505050;
+  border-radius: 50px;
+  border: 0;
+  outline: 0;
+  height: 32px;
+  font-family: PingFangTC;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.livecentent {
+  position: absolute;
+  left: 0;
+  height: calc( 100% - 100px);
+  position: relative;
+}
+
+.livecentent > div {
+  padding: 7px 0px 20px 9px;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-row-gap: 10px;
+}
+
+.livecentent::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #f7f7f7;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 0;
+}
+
+.livecentent header {
+  background-color: #fe9191;
+}
+
+.livecentent header div {
+  font-family: PingFangTC;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.livecentent header div:nth-of-type(1) {
+  margin-left: 30px;
+}
+
+.livecentent main {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.livecentent main::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.livecentent main::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.livecentent main::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+}
+
+.livecentent main > div {
+  background-color: #f6f6f6;
+}
+
+.livecentent main > div:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.livecentent main > div > div {
+  padding: 12px 0;
+}
+
+.livecentent footer {
+  padding: 18px 38px;
+  background-color: #fff;
+}
+
+.livecentent footer div {
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+  font-family: PingFangTC;
+  color: #6d6d6d;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #989898;
+  border-radius: 30px;
+}
+
+.livecentent main .buygrid > div:nth-of-type(1) {
+  margin-left: 30px;
+}
+
+.livecentent .buyListEdit > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.livecentent .buyListEdit i {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buygrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.productinfotop {
+  grid-column-gap: 25px;
+}
+
+.productinfotop span {
+  display: none;
+  font-family: PingFangTC;
+  font-size: 12px;
+  color: #fff;
+  width: 70px;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 50px;
+  background-color: #ff0000;
+}
+
+.productstarttime {
+  display: none;
+  margin-top: 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.productstarttime div {
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+  background-color: #ff9620;
+  padding: 6px 5px;
+  border-radius: 10px;
+  margin: 0 3px;
+}
+
+.productstarttime div:nth-last-of-type(1) {
+  background-color: #b31b00;
+}
+
+.productbutton div {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: /12px;
+  padding: 8px;
+  width: 100%;
+  background-color: #73a3dd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.imgbox {
+  position: relative;
+}
+
+.imgbox span {
+  display: none;
+  font-family: PingFangTC;
+  font-size: 12px;
+  color: #fff;
+  width: 70px;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 50px;
+  background-color: #ff0000;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.startbody .productinfotop span {
+  display: inline-block;
+}
+
+.startbody .productstarttime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.startbody .productbutton {
+  margin: 10px 0 15px 0;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.startbody .productbutton div {
+  display: block;
+}
+
+.startbody .productbutton span {
+  display: none;
+}
+
+.startbody .productbox.active .imgbox span {
+  display: block;
+}
+
+.startbody .livebutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.startbody .endbutton {
+  display: none;
+}
+
+.startbody .livecentent::after {
+  display: none;
+}
+
+.startbody .enable {
+  display: none;
+}
+
+.startbody .disable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

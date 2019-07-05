@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?glx717');
-  src:  url('fonts/icomoon.eot?glx717#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?glx717') format('truetype'),
-    url('fonts/icomoon.woff?glx717') format('woff'),
-    url('fonts/icomoon.svg?glx717#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?k4lung');
+  src:  url('fonts/icomoon.eot?k4lung#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?k4lung') format('truetype'),
+    url('fonts/icomoon.woff?k4lung') format('woff'),
+    url('fonts/icomoon.svg?k4lung#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,88 +24,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arkbeez .path1:before {
-  content: "\e900";
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path2:before {
+.icon-mines .path1:before {
   content: "\e901";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
+  color: rgb(224, 224, 225);
 }
-.icon-arkbeez .path3:before {
+.icon-mines .path2:before {
   content: "\e902";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path4:before {
-  content: "\e903";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path5:before {
-  content: "\e904";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path6:before {
-  content: "\e905";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path7:before {
-  content: "\e906";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path8:before {
-  content: "\e907";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path9:before {
-  content: "\e908";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path10:before {
-  content: "\e909";
-  margin-left: -3.8564453125em;
-  color: rgb(0, 0, 0);
-}
-.icon-arkbeez .path11:before {
-  content: "\e90a";
-  margin-left: -3.8564453125em;
-  color: rgb(230, 185, 36);
+  margin-left: -0.9697265625em;
+  color: rgb(255, 255, 255);
 }
 .icon-calendar-with-a-clock-time-tools:before {
-  content: "\e90b";
+  content: "\e903";
   color: #757575;
 }
 .icon-cancel-button:before {
-  content: "\e90c";
+  content: "\e904";
   color: #9b9a9a;
 }
 .icon-error-triangle:before {
-  content: "\e90d";
+  content: "\e905";
   color: #f00;
 }
 .icon-group:before {
-  content: "\e90e";
+  content: "\e906";
   color: #fff;
 }
 .icon-list:before {
-  content: "\e90f";
+  content: "\e907";
   color: #fff;
 }
+.icon-pencil:before {
+  content: "\e900";
+  color: #9b9a9a;
+}
 .icon-plus-sign-in-a-black-circle:before {
-  content: "\e910";
+  content: "\e908";
   color: #ffca00;
 }
 .icon-url:before {
-  content: "\e911";
+  content: "\e909";
   color: #757575;
-}
-.icon-cross:before {
-  content: "\ea0f";
 }
