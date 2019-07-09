@@ -79,15 +79,11 @@
           align-items: center;
 }
 
-.userphoto img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
-
 .userphoto div {
   border-radius: 50%;
   background-color: #fff;
+  background: url(../../imges/head.jpg) no-repeat center;
+  background-size: cover;
   height: 50px;
   width: 50px;
 }
@@ -472,6 +468,7 @@
 }
 
 .productbutton {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 70px;
@@ -599,6 +596,11 @@
 .productbox.active {
   outline-width: 2px;
   outline-color: red;
+}
+
+.productbox.active2 {
+  outline-width: 2px;
+  outline-color: #ffca00;
 }
 
 .contentbox {
@@ -1163,8 +1165,8 @@
   padding-top: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 50px;
-      grid-template-rows: 1fr 50px;
+  -ms-grid-rows: 350px 50px;
+      grid-template-rows: 350px 50px;
 }
 
 .fbcontent .fbgrid {
@@ -1176,23 +1178,58 @@
 
 .fbcontent .fbiframe {
   width: 100%;
+  position: relative;
 }
 
-.fbcontent .fborder p {
+.fbcontent .fbiframe img {
+  width: 100%;
+  height: 100%;
+}
+
+.fbcontent .fbiframe a {
+  position: absolute;
+  text-decoration: none;
+  color: gray;
+  background-color: #fff;
+  padding: 5px 20px;
+  border-radius: 50px;
+  bottom: 15px;
+  right: 5px;
+}
+
+.fbcontent .fbiframe a:hover {
+  color: black;
+}
+
+.fbcontent .fborder {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.fbcontent .fborder > p {
   font-size: 12px;
   color: #24253d;
+  text-decoration: none;
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.fbcontent .fborder > p i {
+  font-size: 12px;
+  color: white;
+  background-color: #fe5d5d;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .fbheadphote {
   margin: 0 10px 0 25px;
   height: 36px;
-  width: 36px;
-}
-
-.fbheadphote img {
+  width: 47px;
+  background: url("../../imges/head.jpg") no-repeat center;
+  background-size: cover;
   border-radius: 50%;
-  height: 100%;
-  width: 100%;
 }
 
 .fbmessage {
@@ -1312,6 +1349,7 @@
   cursor: pointer;
   border: 1px solid #989898;
   border-radius: 30px;
+  letter-spacing: 20px;
 }
 
 .livecentent main .buygrid > div:nth-of-type(1) {
@@ -1363,28 +1401,6 @@
   background-color: #ff0000;
 }
 
-.productstarttime {
-  display: none;
-  margin-top: 15px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.productstarttime div {
-  cursor: pointer;
-  color: #fff;
-  font-size: 12px;
-  background-color: #ff9620;
-  padding: 6px 5px;
-  border-radius: 10px;
-  margin: 0 3px;
-}
-
-.productstarttime div:nth-last-of-type(1) {
-  background-color: #b31b00;
-}
-
 .productbutton div {
   display: none;
   cursor: pointer;
@@ -1418,14 +1434,232 @@
           transform: translate(-50%);
 }
 
-.startbody .productinfotop span {
-  display: inline-block;
-}
-
-.startbody .productstarttime {
+.ordermessage {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 10px 0;
+}
+
+.ordermessage .orderbox {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ordermessage .ordername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ordermessage .ordername p {
+  display: inline-block;
+  margin: 0;
+  font-size: 14px;
+  color: #24253d;
+}
+
+.ordermessage .ordername a {
+  text-decoration: none;
+  margin-right: 2px;
+}
+
+.ordermessage .ordertype {
+  margin-left: 5px;
+  height: 20px;
+  font-size: 12px;
+  color: white;
+  background-color: red;
+  padding: 2px 12px;
+  border-radius: 50px;
+  line-height: 15px;
+}
+
+.ordermessage .ordertype.succes {
+  background-color: orange;
+}
+
+.ordermessage .bigfan {
+  font-size: 12px;
+  display: block;
+  padding: 0 0px 12px 5px;
+  position: relative;
+}
+
+.orderimg {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(../../imges/head.jpg) no-repeat center;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.remind {
+  display: none;
+  white-space: nowrap;
+  position: relative;
+  font-family: PingFangTC;
+  font-size: 12px;
+  letter-spacing: 0.09px;
+  color: #747474;
+}
+
+.remind i {
+  left: -25px;
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  background-color: #fe5d5d;
+  padding: 0px 5px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.startbody .productbutton div.timeend {
+  background-color: #c62424;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.change > span {
+  text-align: center;
+  display: block;
+  font-size: 70px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.change > p {
+  font-family: PingFangTC;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.22px;
+  text-align: center;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.change .changeedit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.change .changeedit > div {
+  position: relative;
+}
+
+.change .changeedit p {
+  margin: 0 20px 0px 0;
+  font-size: 12px;
+  color: #505050;
+}
+
+.change .changeedit input, .change .changeedit select {
+  text-align: center;
+  width: 165px;
+  border: 0;
+  outline: 0;
+  background-color: #ececec;
+  color: #505050;
+  padding: 10px 15px;
+}
+
+.change .changeedit span {
+  position: absolute;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.change .changeedit .icon-plus-sign-in-a-black-circle {
+  left: 5px;
+}
+
+.change .changeedit .icon-plus-sign-in-a-black-circle::before {
+  color: #e0e0e1;
+}
+
+.change .changeedit .icon-plus-sign-in-a-black-circle.hover::before {
+  color: #fd5739;
+}
+
+.change .changeedit .icon-mines {
+  top: 0;
+  right: 5px;
+}
+
+.change .changeedit .icon-mines .path1 {
+  right: 0;
+}
+
+.change .changeedit .icon-mines .path2 {
+  top: 10px;
+  right: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.change .changeedit .icon-mines.hover .path1::before {
+  color: #fd5739;
+}
+
+.change .changebutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 30px;
+}
+
+.change .changebutton div {
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  padding: 6px 40px;
+  background-color: red;
+}
+
+.change .changebutton div:nth-of-type(1) {
+  background-color: #ffca00;
+}
+
+.change .changebutton span {
+  font-size: 15px;
+}
+
+.startbody .productinfotop span {
+  display: inline-block;
 }
 
 .startbody .productbutton {
@@ -1440,10 +1674,6 @@
 
 .startbody .productbutton span {
   display: none;
-}
-
-.startbody .productbox.active .imgbox span {
-  display: block;
 }
 
 .startbody .livebutton {
@@ -1468,5 +1698,264 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.startbody .remind {
+  display: block;
+}
+
+.nama .editbutton .icon-plus-sign-in-a-black-circle::before {
+  color: white;
+}
+
+.nama .editbutton .icon-list::before {
+  color: #ffca00;
+}
+
+.nama .left {
+  position: relative;
+}
+
+.nama .relative {
+  position: absolute;
+  left: 90px;
+}
+
+.nama .listcontainer {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nama .listcontainer .rightconerbutton {
+  float: right;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.nama .listcontainer .listsearchbar {
+  margin-bottom: 35px;
+}
+
+.nama .listcontainer .listcontent {
+  margin-top: 15px;
+  overflow-y: auto;
+  max-height: 485px;
+  -webkit-box-shadow: 0px 0px 5px #c9c9c9;
+          box-shadow: 0px 0px 5px #c9c9c9;
+}
+
+.nama .listcontainer .listcontent::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.nama .listcontainer .listcontent::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.nama .listcontainer .listcontent::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+}
+
+.rightconerbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rightconerbutton div {
+  cursor: pointer;
+  color: black;
+  padding: 10px 20px;
+  width: 185px;
+  height: 60px;
+  margin: 0 5px;
+  background: #fff;
+  border: 1px solid #979797;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 18px;
+}
+
+.rightconerbutton div.active {
+  background-color: #e17777;
+  color: white;
+}
+
+.listsearchbar {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 8px #c9c9c9;
+          box-shadow: 0px 0px 8px #c9c9c9;
+  padding: 30px 55px;
+}
+
+.listsearchbar .fa-search {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.listsearchbar input {
+  height: 30px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: #828282;
+  border-right: 2px solid #ececec;
+}
+
+.listsearchbar input::-webkit-input-placeholder {
+  color: #828282;
+}
+
+.listsearchbar input:-ms-input-placeholder {
+  color: #828282;
+}
+
+.listsearchbar input::-ms-input-placeholder {
+  color: #828282;
+}
+
+.listsearchbar input::placeholder {
+  color: #828282;
+}
+
+.listsearchbar p {
+  position: relative;
+  margin: 0;
+  color: #828282;
+  font-size: 20px;
+  padding-left: 60px;
+}
+
+.listsearchbar p .icon-calendar-with-a-clock-time-tools {
+  position: absolute;
+  left: 20px;
+  font-size: 25px;
+  bottom: 2px;
+  cursor: pointer;
+}
+
+.listgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 170px 170px 170px  1fr;
+      grid-template-columns: 1fr 170px 170px 170px  1fr;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px #c9c9c9;
+          box-shadow: 0px 0px 5px #c9c9c9;
+}
+
+.listgrid > div {
+  font-family: PingFangTC;
+  margin: 30px 0;
+  color: #555555;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border-right: 1px solid #cacaca;
+}
+
+.listgrid > div:nth-of-type(1) {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.listgrid > div:nth-last-of-type(1) {
+  border: 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.listbody {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #ececec;
+}
+
+.listbody p {
+  margin: 0;
+}
+
+.listbody div {
+  border: 0;
+}
+
+.listbody div:nth-of-type(3), .listbody div:nth-of-type(2) {
+  color: #ececec;
+}
+
+.listbody div:nth-of-type(4) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listbody div:nth-last-of-type(1) {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history .listgrid {
+  -ms-grid-columns: 1fr  170px 170px 170px 170px  1fr;
+      grid-template-columns: 1fr  170px 170px 170px 170px  1fr;
+}
+
+.history .listbody div {
+  color: black;
+}
+
+.history .listbody div:nth-of-type(3), .history .listbody div:nth-of-type(5) {
+  color: #ececec;
+}
+
+.history .listbody div:nth-of-type(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history .listbody div .imgbox {
+  background: url(../../imges/justin.png) no-repeat center;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

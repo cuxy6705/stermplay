@@ -54,14 +54,11 @@ $yellow:#ffca00;
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-    }
     div{
        border-radius: 50%;
         background-color: #fff;
+        background: url(../../imges/head.jpg) no-repeat center;
+        background-size: cover;
         height: 50px;
         width: 50px;
     }
@@ -329,6 +326,7 @@ $yellow:#ffca00;
     }
 }
 .productbutton{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 70px;
     grid-column-gap: 8px;
@@ -428,6 +426,10 @@ $yellow:#ffca00;
     &.active{
         outline-width: 2px;
         outline-color: red;
+    }
+    &.active2{
+        outline-width: 2px;
+        outline-color:$yellow;
     }
 }
 .contentbox{
@@ -881,30 +883,63 @@ $yellow:#ffca00;
     background-color: #fff;
     padding-top: 5px;
     display: grid;
-    grid-template-rows: 1fr 50px;
+    grid-template-rows: 350px 50px;
     .fbgrid{
         display: grid;
         grid-template-columns: 1fr 185px;
+
     }
     .fbiframe{
         width: 100%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+
+        }
+        a{
+            position: absolute;
+            text-decoration: none;
+            color: gray;
+            background-color: #fff;
+            padding: 5px 20px;
+            border-radius: 50px;
+            bottom: 15px;
+            right: 5px;
+            &:hover{
+                color: black;
+            }
+
+        }
     }
     .fborder{
-        p{
+        max-height: 350px;
+        overflow-y: auto;
+       >p{
             font-size: 12px;
             color: #24253d;
+            text-decoration: none;
+            margin: 5px 0px;
+            text-align:center;
+            i{
+                font-size: 12px;
+                color: white;
+                background-color: #fe5d5d;
+                padding: 2px 8px;
+                border-radius: 50%;
+                margin: 0 5px;
+            }
         }
     }
 }
 .fbheadphote{
+
     margin: 0 10px 0 25px;
     height: 36px;
-    width: 36px;
-    img{
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-    }
+    width: 47px;
+    background: url('../../imges/head.jpg') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
 }
 .fbmessage{
     height: 50px;
@@ -1004,7 +1039,7 @@ $yellow:#ffca00;
             cursor: pointer;
             border: 1px solid #989898;
             border-radius: 30px;
-            
+            letter-spacing: 20px;
         }
     }
     main .buygrid > div:nth-of-type(1){
@@ -1045,24 +1080,7 @@ $yellow:#ffca00;
     }
 }
 
-.productstarttime{
-    display: none;
-    margin-top: 15px;
-   
-    justify-content: flex-end;
-    div{
-        cursor: pointer;
-        color: #fff;
-        font-size: 12px;
-        background-color: #ff9620;
-        padding: 6px 5px;
-        border-radius: 10px;
-        margin: 0 3px; 
-        &:nth-last-of-type(1){
-             background-color:#b31b00;
-        }
-    }
-}
+
 .productbutton{
     div{
         display: none;
@@ -1096,15 +1114,202 @@ $yellow:#ffca00;
     transform: translate(-50%);
     }
 }
+.ordermessage{
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    .orderbox{
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .ordername{
+        display: flex;
+        align-items: center;
+        background-color: #f7f7f7;
+        border-radius: 50px;
+        padding: 5px 10px;  
+        font-size: 14px;
+        text-decoration: none;
+        font-weight:bold;
+        p{
+            display: inline-block;
+            margin: 0;
+            font-size: 14px;
+            color: #24253d;
+        }
+        a{
+            text-decoration: none;
+            margin-right: 2px;
+        }
+    }
+    .ordertype{
+        margin-left: 5px;
+        height: 20px;
+        font-size: 12px;
+        color: white;
+        background-color: red;
+        padding: 2px 12px;
+        border-radius: 50px;
+        line-height: 15px;
+        &.succes{
+            background-color:orange;
+        }
+    }
+    .bigfan{
+    font-size: 12px;
+    display: block;
+    padding:0 0px 12px 5px;
+    position: relative;
+    }
+}
 
+.orderimg{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    background: url(../../imges/head.jpg) no-repeat  center;
+    border-radius: 50%;
+    background-size: cover;
+}
+.remind{
+    display: none;
+    white-space: nowrap;
+    position: relative;
+    font-family: PingFangTC;
+  font-size: 12px;
+  letter-spacing: 0.09px;
+  color: #747474;
+  i{
+    left: -25px;
+    position:absolute;
+    font-size: 12px;
+    color: white;
+    background-color: #fe5d5d;
+    padding: 0px 5px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+}
+ .startbody .productbutton div.timeend{      
+    background-color: #c62424;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+ }
+
+
+
+.change{
+    >span{
+        text-align: center;
+        display: block;
+        font-size: 70px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    >p{
+      font-family: PingFangTC;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.22px;
+        text-align: center;
+        color: #000000;  
+        margin:0 0 20px 0; 
+    }
+
+    .changeedit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        >div{
+            position: relative;
+            
+        }
+        p{
+            margin:0 20px 0px 0; 
+            font-size: 12px;
+            color: #505050;
+        }
+        
+        input,select{
+            text-align: center;
+            width: 165px;
+            border: 0;
+            outline: 0;
+            background-color: #ececec;
+            color: #505050;
+            padding: 10px 15px;
+        }
+        span{
+            position: absolute;
+            font-size: 20px;
+            line-height: 45px;
+        }
+        .icon-plus-sign-in-a-black-circle{
+            left: 5px;
+             &::before{
+            color: rgb(224, 224, 225);
+            }
+
+            &.hover{
+                &::before{
+                color: #fd5739;
+                }
+            }
+        }
+        .icon-mines{
+            top: 0;
+            right: 5px;
+            .path1{
+                right: 0;
+            }
+            .path2{
+                top: 10px;
+                right: 10px;
+                transform: rotate(90deg);
+            }
+             &.hover{
+            .path1::before{
+            color: #fd5739;
+            }
+            
+        }
+        }
+    }
+
+
+    .changebutton{
+        display: flex; 
+        justify-content: center;
+        margin: 50px 0 30px;
+        div{
+
+            &:nth-of-type(1){
+                background-color:$yellow;
+            }
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 50px;
+            color: white;
+            font-size: 16px;
+            padding: 6px 40px;
+            background-color: red;
+        }
+        span{
+            font-size: 15px;
+        }
+    }
+}
 // 開始直播
 .startbody{
  .productinfotop span{
      display: inline-block;
  }
- .productstarttime{
-     display: flex;
- }
+
  .productbutton{
      margin: 10px 0 15px 0;
      grid-template-columns: 1fr;
@@ -1117,7 +1322,7 @@ $yellow:#ffca00;
  }
  .productbox.active{
     .imgbox span{
-        display: block;
+        // display: block;
     } 
  }
  .livebutton{
@@ -1135,4 +1340,211 @@ $yellow:#ffca00;
  .disable{
      display: flex;
  }
+ .remind{
+     display: block;
+      
+ }
+}
+// ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲開始直播▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+
+// 直播列表
+.nama{
+    .editbutton{
+        .icon-plus-sign-in-a-black-circle::before{
+            color: white;
+        }
+        .icon-list::before{
+            color: $yellow;
+        }
+    }
+    .left{
+        position: relative;
+    }
+    .relative{
+        position: absolute;
+        left: 90px;
+    }
+    .listcontainer{
+       
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        .rightconerbutton{
+            float: right;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+        .listsearchbar{
+            margin-bottom: 35px;
+        }
+        .listcontent{
+            margin-top: 15px;
+            overflow-y:auto;
+            max-height: 485px;
+            box-shadow: 0px 0px 5px #c9c9c9;
+            &::-webkit-scrollbar-track
+            {	border-radius: 10px;
+            	background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar
+            {
+            	width: 12px;
+            	background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                border-radius: 10px;
+                border: 2px solid #f6f6f6;
+            	background-color: #fff;
+            }
+        }
+    }
+}
+
+.rightconerbutton{
+    display: flex;
+    div{
+        cursor: pointer;
+        color: black;
+        padding: 10px 20px;
+        width: 185px;
+        height: 60px;
+        margin: 0 5px;
+        background: #fff;
+        border: 1px solid #979797;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 18px;
+        &.active{
+            background-color: #e17777;
+            color: white;
+        }
+    }
+}
+
+.listsearchbar{
+    clear:both;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px #c9c9c9;
+    padding: 30px 55px;
+    .fa-search{
+        font-size: 22px;
+        margin-right: 20px;
+    }
+    input{
+        height: 30px;
+        width: 100%;
+        border: 0;
+        outline: 0;
+        font-size: 20px;
+        color: #828282;
+        border-right: 2px solid #ececec; 
+        &::placeholder {
+        color: #828282;
+        }
+    }
+    p{
+        position: relative;
+        margin: 0;
+        color: #828282;
+        font-size: 20px;
+        padding-left: 60px;
+        .icon-calendar-with-a-clock-time-tools{
+            position: absolute;
+            left: 20px;
+            font-size: 25px;
+            bottom: 2px;
+            cursor: pointer;
+        }
+    }
+}
+.listgrid{
+    display: grid;
+    grid-template-columns: 1fr 170px 170px 170px  1fr;
+    background-color: white;
+    box-shadow: 0px 0px 5px #c9c9c9;
+    >div{
+        font-family: PingFangTC;
+        margin: 30px 0;
+        color: #555555;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        border-right: 1px solid #cacaca;
+        &:nth-of-type(1){
+            text-align: left;
+            padding-left: 50px;
+        }
+        &:nth-last-of-type(1){
+            border: 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
+
+}
+.listbody{
+    box-shadow: none;
+    border-bottom: 1px solid #ececec;
+
+    p{
+        margin: 0;
+    }
+    div{
+        border: 0;
+        &:nth-of-type(3),&:nth-of-type(2){
+            color: #ececec;
+        }
+        &:nth-of-type(4){
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+         &:nth-last-of-type(1){
+             padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+// ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲直播列表▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+
+// 歷史紀錄
+.history{
+    .listgrid{
+        grid-template-columns: 1fr  170px 170px 170px 170px  1fr;
+    }
+    .listbody{
+       
+        div{
+            color: black;
+            &:nth-of-type(3),&:nth-of-type(5){
+            color: #ececec;
+            }
+            &:nth-of-type(4){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .imgbox{
+                background: url(../../imges/justin.png) no-repeat center;
+                height: 35px;
+                width: 35px;
+                margin-right: 10px;
+                border-radius: 50%;
+                background-size: cover;
+            }
+        }
+    }
 }

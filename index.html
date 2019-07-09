@@ -25,7 +25,6 @@
                 <div class="topbar">
                     <div class="userphoto">
                         <div>
-                            <img src="./imges/head.jpg" alt="">
                         </div>
                     </div>
                     <div class="editbutton">
@@ -100,21 +99,83 @@
                         <div class="fbcontent">
                             <div class="fbgrid">
                                 <div class="fborder">
-                                    <p>點選人名即可進行修改</p>
+                                    <p><i>!</i> 點選人名即可進行修改</p>
+
                                     <div class="ordermessage">
-                                        <div></div>
-                                        <div>
-                                            
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 主播好正小甲好率</div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> +1小綠花</div>
+                                            <div class="ordertype">刪除訂單</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 有沒有小紅花?</div>
+                                            <div class="ordertype succes">轉單成功</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> +2</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 怎麼下單?</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                            <span class="bigfan"></span>
+                                            <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="fbiframe">
                                     <img src="./imges/st.png" alt="">
+                                    <a href="#">切換畫面</a>
                                 </div>
                             </div>
                             <div class="fbmessage">
                                 <div class="fbheadphote">
-                                    <img src="./imges/head.jpg" alt="">
+                                    
                                 </div>
                                 <input type="text" class="message" placeholder="留言....">
                             </div>
@@ -131,7 +192,7 @@
                                     <div>小粉紅花</div>
                                     <div class="buygrid buyListEdit">
                                         <span>3</span>
-                                        <i class="icon-pencil"></i>
+                                        <i data-toggle="modal" data-target="#change" class="icon-pencil"></i>
                                         <i class="icon-cancel-button"></i>
                                     </div>
                                 </div>
@@ -196,6 +257,7 @@
                     <div>
                         <div>
                             <h3>直播商品資訊</h3>
+                            <div class="remind"><i>!</i> 點選開放購買後，留言+1才開始為有效成單。</div>
                             <div class="productinfo">
                                 <div>
                                     <div class="productgrid productinfotop">
@@ -226,14 +288,12 @@
                                         <input class="enable" type="text" value="00:00:00">
                                         <div  class="disable" >00:00:00</div>
                                     </div>
-                                    <div class="productstarttime">
-                                        <div>計時開始</div>
-                                        <div>計時結束</div>
-                                    </div>
+
                                     <div class="productbutton">
                                         <span>儲存</span>
                                         <span>刪除</span>
-                                        <div>開放購買</div>
+                                        <div class="timeopen">開放購買</div>
+                                        <div class="timeend">計時結束</div>
                                     </div>
                                 </div>
                             </div>
@@ -244,12 +304,12 @@
                             <div class="swiper-container swiper-product">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide mr">
-                                        <div class="productbox">
+                                        <div class="productbox active">
                                             <div class="imgbox">
                                                 <span>ON AIR</span>
                                            
                                             </div>
-                                            <div class="contentbox">
+                                            <div class="contentbox ">
                                                 <p class="contenttitle">小綠花</p>
                                                 <div>
                                                     <p>直播價格:</p>
@@ -261,7 +321,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="productbox">
+                                        <div class="productbox ">
                                             <div class="imgbox">
                                                 <span>ON AIR</span>
                                             </div>
@@ -669,6 +729,8 @@
             </div>
         </div>
     </div>
+
+<!-- 開始直播按鈕 -->
     <div class="modal fade" id="start" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -713,7 +775,7 @@
     </div>
 
 
-
+<!-- 抽獎切換內容 -->
     <div class="gamecontent_1">
         <div class="gamecontentbase">
             <span>設定1~1000之間的數字，觀眾猜中後，畫面直接顯示中獎人!</span>
@@ -861,8 +923,40 @@
         </div>
     </div>
 
+<!-- 下單修改 -->
+<div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="change">
+                <span class="icon-error-triangle"></span>
+                <p>下單修改</p>
+                <div class="changeedit">
+                    <p>選擇商品</p>
+                    <select name="" id="">
+                        <option value="">兔子娃娃</option>
+                        <option value="">小狗娃娃</option>
+                        <option value="">貓咪娃娃</option>
+                    </select>
+                </div>
+                <div class="changeedit">
+                    <p>商品數量</p>
+                    <div class="changenumberbutton">
+                        <span class="icon-plus-sign-in-a-black-circle"></span>
+                        <input type="text" value="30">
+                        <span class="icon-mines"><span class="path1"></span><span class="path2"></span></span>
+                    </div>
+                    
+                </div>
 
-
+                <div class="changebutton">
+                    <div data-dismiss="modal">取消</div>
+                    <div id="changeview" data-dismiss="modal">修改</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -938,6 +1032,7 @@
         });
 
         $('.productbox').on('click', function () {
+            if ($('.timeend').css('display') == 'block') return false;
             $('.productbox').removeClass('active');
             $(this).addClass('active');
         });
@@ -953,6 +1048,9 @@
             $('.editcontent').show().css('opacity', "0");
             $('.editcontent').animate({ left: "0", opacity: 1 }, function () {
             });
+             $('.timeend').hide();
+            $('.productbox').removeClass('active2');
+             $('.productbox.active').find('span').css('display', 'none');
         });
         $('.number > span').hover(function () {
                 $(this).addClass('hover');
@@ -960,6 +1058,31 @@
                 $(this).removeClass('hover');
             }
         );
+        $('.changenumberbutton > span').hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            }
+        );
+        $('.timeopen').on('click', function () {
+            if($(this).css('display') =='block'){
+                $('.timeend').show();
+                 $('.productbox').click(function(){
+                     if($(this).hasClass('active')) return false;
+                     $('.productbox').removeClass('active2');
+                     $(this).addClass('active2');
+                 });
+            }
+            $('.productbox.active').find('span').css('display','block');
+        }); 
+
+        $('.timeend').on('click', function () {
+            if($(this).css('display') =='block'){
+                $('.timeend').hide();
+                 $('.productbox').removeClass('active2');
+            }
+            $('.productbox.active').find('span').css('display', 'none');
+        }); 
     </script>
 </body>
 
