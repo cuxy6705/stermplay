@@ -28,21 +28,21 @@
                         </div>
                     </div>
                     <div class="editbutton">
-                        <span class="icon-plus-sign-in-a-black-circle"></span>
-                        <span class="icon-list"></span>
-                        <span class="icon-group"></span>
+                        <span onclick="location.href='./index.html'" class="icon-plus-sign-in-a-black-circle"></span>
+                        <span onclick="location.href='./nama.html'" class="icon-list"></span>
+                        <span onclick="location.href='./relationshelp.html'" class="icon-group"></span>
                     </div>
                 </div>
                 <div class="editcontent">
                     <div>
                         <div class="grid readyblock">
                             <span>準備中</span>
-                            <p>直播名稱</p>
+                            <input type="text" placeholder="直播名稱">
                         </div>
                         <div class="grid mainiput">
                             <div>直播日期 </div>
-                            <input type="text">
-                            <i class="icon-calendar-with-a-clock-time-tools"></i>
+                            <input class="date" type="date">
+                            <!-- <i class="icon-calendar-with-a-clock-time-tools"></i> -->
                         </div>
                         <div class="grid mainiput">
                             <div>直播地址</div>
@@ -81,7 +81,7 @@
                                 </span>
                             </div>
                             <textarea
-                                placeholder="登入以下連結，看看自己買了什麼戰利品吧! https://arkbeez.com/order/ seller_list"></textarea>
+                                placeholder="登入以下連結，看看自己買了什麼戰利品吧! https://arkbeez.com/order/ seller_list"></textarea>
                         </div>
                         <div class="grid mainiput maintextarea">
                             <div>回復直播留言
@@ -101,7 +101,7 @@
                                 <div class="fborder">
                                     <p><i>!</i> 點選人名即可進行修改</p>
 
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
@@ -109,7 +109,7 @@
                                           
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
@@ -117,7 +117,7 @@
                                             <div class="ordertype">刪除訂單</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
@@ -125,42 +125,42 @@
                                             <div class="ordertype succes">轉單成功</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> +2</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> 怎麼下單?</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> 大家安安</div>
                                         </div>
                                     </div>
-                                    <div class="ordermessage">
+                                    <div class="ordermessage" data-toggle="modal" data-target="#change">
                                         <div class="orderimg"></div>
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
@@ -487,7 +487,10 @@
                     <div class="gamecontent gamewidth">
                         <span class="icon-plus-sign-in-a-black-circle" data-toggle="modal"
                             data-target="#addgame"></span>
-                        <h3>直播遊戲資訊</h3>
+                        <span class="typetimestart">計時開始</span>
+                        <span class="typetimeend">計時結束</span>
+                        <span class="typetimeclean">清除中獎畫面</span>
+                        <h3 >直播遊戲資訊</h3>
                         <div class="flex gamecontent">
                             <div class="swiper-container swiper-game">
                                 <div class="swiper-wrapper">
@@ -495,7 +498,7 @@
                                         <div class="gameready">
                                             <span>等待中</span>
                                             <div>
-                                                <i class="icon-pencil"></i>
+                                                <i data-toggle="modal"  data-target="#editgame" class="icon-pencil"></i>
                                                 <i class="icon-cancel-button"></i>
                                             </div>
                                         </div>
@@ -520,7 +523,7 @@
                                         <div class="gameready">
                                             <span class="live">LIVE</span>
                                             <div>
-                                                <i class="icon-pencil"></i>
+                                                <i  data-toggle="modal"  data-target="#editgame" class="icon-pencil"></i>
                                                 <i class="icon-cancel-button"></i>
                                             </div>
                                         </div>
@@ -558,7 +561,7 @@
                                         <div class="gameready">
                                             <span class="end">已結束</span>
                                             <div>
-                                                <i class="icon-pencil"></i>
+                                                <i  data-toggle="modal"  data-target="#editgame" class="icon-pencil"></i>
                                                 <i class="icon-cancel-button"></i>
                                             </div>
                                         </div>
@@ -585,7 +588,7 @@
                                         <div class="gameready">
                                             <span>等待中</span>
                                             <div>
-                                                <i class="icon-pencil"></i>
+                                                <i  data-toggle="modal"  data-target="#editgame" class="icon-pencil" ></i>
                                                 <i class="icon-cancel-button"></i>
                                             </div>
                                         </div>
@@ -756,6 +759,32 @@
                 <div class="gamemodal">
                     <div class="gamemodeltitle">
                         <p>新增遊戲 / 活動</p>
+                        <select name="gameselect" id="gameselect">
+                            <option value="1">抽獎 - 終極密碼</option>
+                            <option value="2">抽獎 - 關鍵字TAG好友</option>
+                            <option value="3">投票</option>
+                            <option value="4">抽獎 - 公開分享</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="gamemodelcontent"></div>
+                    <div class="gamebutton">
+                        <div data-dismiss="modal">取消</div>
+                        <div>確認</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="gamemodal">
+                    <div class="gamemodeltitle">
+                        <p>編輯遊戲 / 活動</p>
                         <select name="gameselect" id="gameselect">
                             <option value="1">抽獎 - 終極密碼</option>
                             <option value="2">抽獎 - 關鍵字TAG好友</option>
@@ -951,7 +980,7 @@
 
                 <div class="changebutton">
                     <div data-dismiss="modal">取消</div>
-                    <div id="changeview" data-dismiss="modal">修改</div>
+                    <div id="changeview" data-dismiss="modal">確認</div>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ark直播列表</title>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css' />
@@ -33,8 +33,8 @@
 
 
 </style>
-<body class="nama">
-    <!-- <div class="container">
+<body class="nama viewpoint">
+    <div class="container">
         <div class="left">
             <div class="menubar">
                 <img src="./imges/arkbeez.svg" alt="">
@@ -47,175 +47,164 @@
                         </div>
                     </div>
                     <div class="editbutton">
-                        <span class="icon-plus-sign-in-a-black-circle"></span>
-                        <span class="icon-list"></span>
-                        <span class="icon-group"></span>
+                        <span onclick="location.href='./index.html'" class="icon-plus-sign-in-a-black-circle"></span>
+                        <span onclick="location.href='./nama.html'" class="icon-list"></span>
+                        <span onclick="location.href='./relationshelp.html'" class="icon-group"></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="width:100%; background-color: #ececec;">
+        <div style="width:100%; background-color: #f7f7f7;">
             <div class="listcontainer">
                 <div class="rightconerbutton">
-                    <div class="active">草稿夾</div>
-                    <div>歷史紀錄</div>
+                    <div class="active">直播總覽</div>
+                    <div onclick="location.href='./saleefct.html'">銷售成效</div>
                 </div>
+                <div class="effectcontainer">
+                    <div class="allview">
+                        <div class="f1">
+                            <h3>老闆大拍賣</h3>
+                            <div class="timebar">
+                                <p><i class="icon-calendar-with-a-clock-time-tools"></i><input type="text" name="daterange" /></p>
+                                <span><i class="far fa-clock"></i> 00:07:04</span>
+                            </div>
+                            <div class="effect">
+                                <div>
+                                    <p>觀看人數<span>1212</span> 人</p>
+                                </div>
+                                <div>
+                                    <p>分享人數<span>20</span>人</p>
+                                </div>
+                                <div>
+                                    <p>觸及人數<span>3333</span>人</p>
+                                </div>
+                                <div>
+                                    <p>總銷售數<span>58</span>萬</p>
+                                </div>
+                                <div>
+                                    <p>按讚人數<span>43</span>人</p>
+                                </div>
+                                <div>
+                                    <p>銷售總額<span>39,990</span>元</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="listsearchbar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search">
-                    <span></span>
+                        <div class="f2">
+                            <img src="./imges/st2.png" alt="">
+                            <div >
+                                <div class="fbmarster">
+                                    <div class="fbmarsterimg">
+                                        <canvas id="canvas" class="canvas"></canvas>
+                                    </div>
+                                    <div class="fbmasterlittlebox">
+                                        <p>Cindy的直播影片</p>
+                                        <span>由Cindy發布，2019-06-03 11:45:45</span>
+                                    </div>
+                                </div>
+                                <div class="fbmarstercontent"> 
+                                    
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                   
+                                            <div class="ordername"><a href="#">林宇軒</a>小賈每天加班</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                        
+                                            <div class="ordername"><a href="#">林宇軒</a> 主播好正小甲好率</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                           
+                                            <div class="ordername"><a href="#">林宇軒</a> 主播好正小甲好率</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                  
+                                            <div class="ordername"><a href="#">林宇軒</a> 主播好正小甲好率</div>
+                                        </div>
+                                    </div>
+                                    <div class="ordermessage">
+                                        <div class="orderimg"></div>
+                                        <div class="orderbox">
+                                          
+                                            <div class="ordername"><a href="#">林宇軒</a> 主播好正小甲好率</div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
 
+                        <div id="mountNode" class="f3">
+                            <div class="text">
+                                <p>觀看收視率</p>
+                                <span>111,593</span>
+                            </div>
+                        </div>
 
-                    <p><i class="icon-calendar-with-a-clock-time-tools"></i> 2019.01~2019.03</p>
-
-                </div>
-                <div class="listgrid">
-                    <div>直播名稱</div>
-                    <div>建立日期</div>
-                    <div>直播日期</div>
-                    <div>直播商品</div>
-                    <div>遊戲操作</div>
-                </div>
-                <div class="listcontent">
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
-                        </div>
-                    </div>
-                    <div class="listgrid listbody">
-                        <div>母親節特惠</div>
-                        <div>2019.05.01</div>
-                        <div>2019.06.01</div>
-                        <div>兔子娃娃、熊叔叔兔子娃娃、熊叔叔</div>
-                        <div>
-                            <p>抽獎*2、投票*1</p>
-                            <i class="icon-pencil"></i>
-                            <i class="icon-cancel-button"></i>
+                        <div class="f4">
+                            <div>
+                                <div class="allviewgrid">
+                                    <div>直播遊戲資訊</div>
+                                    <div>獎品名稱</div>
+                                    <div>獎品名額</div>
+                                    <div>計時器</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                                <div class="allviewgrid allviewgridbody">
+                                    <div>抽獎-終極密碼</div>
+                                    <div>小粉紅花</div>
+                                    <div>3</div>
+                                    <div>00:02:00</div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </div>
 
-    </div> -->
+    </div>
 
 
 
@@ -227,150 +216,91 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js'></script>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2/3.4.10/dist/g2.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="./js/rain.js"></script>
 
-
-
-
-
-
-    <script>
-    
-    var width = 400
-        var height = 400
-        var padding = {
-            top: 50,
-            right: 50,
-            bottom: 50,
-            left: 50
-        }
-
-        var svg = d3.select("body").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-
-        var colors = [d3.rgb(0, 0, 255), d3.rgb(0, 255, 0)]
-
-        var dataSet = [{
-            country: "china",
-            gdp: [
-                [0000, 11920],
-                [0030, 13170],
-                [1000, 14550],
-                [1030, 16500],
-                [0200, 19440],
-                [0230, 22870],
-                [0300, 27930],
-                [0330, 35040],
-                [0400, 45470],
-            ]
-        },
-
-        ]
-
-
-        var gdpMax = 0
-        for (var i = 0; i < dataSet.length; i++) {
-            var currentGdp = d3.max(dataSet[i].gdp, function (d) {
-                return d[1]
-            })
-            if (currentGdp > gdpMax) {
-                gdpMax = currentGdp
+<script>
+     $('input[name="daterange"]').daterangepicker({
+            "locale": {
+                "format": "YYYY/MM",
+                "separator": " ~ ",
             }
-        }
 
-        var xScale = d3.scale.linear()
-            .domain([400, 30])
-            .range([0, width - padding.left - padding.right])
-
-        var yScale = d3.scale.linear()
-            .domain([0, gdpMax])
-            .range([height - padding.top - padding.bottom, 0])
-
-
-        var linePath = d3.svg.line()
-            .x(function (d) {
-                return xScale(d[0])
-            })
-            .y(function (d) {
-                return yScale(d[1])
-            })
-            .interpolate("cardinal")
-
-
-        // -- 線 --
-        svg.selectAll("path")
-            .data(dataSet)
-            .enter()
-            .append("path")
-            .attr("transform", "translate(" + padding.left + "," + padding.top + ")")
-            .attr("d", function (d) {
-                return linePath(d.gdp)
-            })
-            .attr("fill", "none")
-            .attr("stroke-width", 3)
-            .attr("stroke", function (d, i) {
-                return colors[i]
-            })
-
-
-        // -- 座標軸 --
-        var xAxis = d3.svg.axis()
-            .scale(xScale)
-            .ticks(5)
-            .tickFormat(d3.format("d"))
-            .orient("bottom")
-
-        var yAxis = d3.svg.axis()
-            .scale(yScale)
-            .orient("left")
-
-        svg.append("g")
-            .attr("class", "xAxis")
-            .attr("transform", "translate(" + padding.left + "," + (height - padding.bottom) + ")")
-            .call(xAxis)
-
-        svg.append("g")
-            .attr("class", "yAxis")
-            .attr("transform", "translate(" + padding.left + "," + padding.top + ")")
-            .call(yAxis)
-
-        // -- 標記 --
-        var symbol = d3.svg.symbol()
-            .size(100)
-            .type("square")
-
-        svg.selectAll(".mark")
-            .data(dataSet)
-            .enter()
-            .append("path")
-            .attr("class", "mark")
-            .attr("d", function (d) {
-                return symbol(d)
-            })
-            .attr("transform", function (d, i) {
-                return "translate(" + (padding.left + i * 60) + ", " + (height - 10) + ")"
-            })
-            .attr("fill", function (d, i) {
-                return colors[i]
-            })
-
-        svg.selectAll(".markText")
-            .data(dataSet)
-            .enter()
-            .append("text")
-            .attr("class", "markText")
-            .attr("transform", function (d, i) {
-                return "translate(" + (padding.left + 10 + i * 60) + ", " + (height - 5) + ")"
-            })
-            .attr("font-size", 12)
-            .text(function (d) {
-                return d.country
-            })
-
+        });
     
-    </script>
+    const data = [{
+        time: '00:00',
+        value: 30000
+    }, {
+        time: '00:30',
+        value: 15000
+    }, {
+        time: '01:00',
+        value: 18000
+    }, {
+        time: '01:30',
+        value: 20000
+    }, {
+        time: '02:00',
+        value: 22000
+    }, 
+    {
+        time: '02:30',
+        value: 20000
+    },
+    {
+        time: '03:00',
+        value: 31000
+    },
+    {
+        time: '03:30',
+        
+    },
+    {
+        time: '04:00',
+
+    },
+    {
+        time: '04:30',
+        
+    }
+    
+
+
+    ];
+    var chart = new G2.Chart({
+        container: 'mountNode',
+        height:250,
+        width:500,
+        
+    });
+    chart.source(data);
+    chart.scale('value', {
+        min: 0
+    });
+    chart.scale('time', {
+        range: [0, 1]
+    });
+    chart.tooltip({
+        crosshairs: {
+            type: 'line'
+        }
+    });
+    chart.line().position('time*value').color('#f10c48');
+    chart.point().position('time*value').size(4).shape('circle').style({
+        stroke: '#f10c48',
+        lineWidth: 1.5
+    }).color('#fff');
+   
+    chart.render();
+
+
+</script>
+
 </body>
 
 </html>

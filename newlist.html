@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ark直播列表</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.css' />
+    <link rel="stylesheet" href="./dist/font.css">
+    <link rel="stylesheet" href="./dist/style/style.min.css">
+</head>
+
+<body class="nama relation newlist">
+    <div class="container">
+        <div class="left">
+            <div class="menubar">
+                <img src="./imges/arkbeez.svg" alt="">
+                <span></span>
+            </div>
+            <div class="relative">
+                <div class="topbar">
+                    <div class="userphoto">
+                        <div>
+                        </div>
+                    </div>
+                    <div class="editbutton">
+                        <span onclick="location.href='./index.html'" class="icon-plus-sign-in-a-black-circle"></span>
+                        <span onclick="location.href='./nama.html'" class="icon-list"></span>
+                        <span onclick="location.href='./relationshelp.html'" class="icon-group"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width:100%; background-color: #f7f7f7;">
+            <div class="listcontainer">
+                <div class="rightconerbutton">
+                    <div onclick="location.href='./relationshelp.html'">所有名單</div>
+                    <div class="active" >新進名單</div>
+                    <div onclick="location.href='./special.html'">特殊名單</div>
+                </div>
+                
+                <div class="relationtop">
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search"></div>
+                    <div>
+                        <select>
+                            <option>選擇客戶</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>直播名稱</option>
+                        </select>
+                    </div>
+                    <div>
+                        <i class="icon-calendar-with-a-clock-time-tools"></i>
+                        <input type="text" name="relation">
+                    </div>
+                    <div>
+                        <p>Show</p>
+                        <select>
+                            <option>5</option>
+                        </select>
+                        <p>entries</p>
+                    </div>
+                    <div>
+                        <i class="icon-export"></i>
+                        <p>匯出</p>
+                    </div>
+                </div>
+                <div class="relationgrid">
+                    <div>
+                        <select>
+                            <option>客戶名</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>互動數</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>下單筆數</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>下單金額</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>餐與直播名稱(時間)</option>
+                        </select>
+                    </div>
+                   
+
+                </div>
+                <div class="relationcontent">
+
+                    <div class="relationgrid relationbody">
+                        <div>
+                            <div class="imgbox"></div>
+                            <div>小甲</div>
+                        </div>
+                        
+                        <div>53</div>
+                        <div>15</div>
+                        <div>5400</div>
+                        <div>母親節特惠 - 2019.06.12</div>
+                    </div>
+                    <div class="relationgrid relationbody">
+                        <div>
+                            <div class="imgbox"></div>
+                            <div>小甲</div>
+                        </div>
+                       
+                        <div>53</div>
+                        <div>15</div>
+                        <div>5400</div>
+                        <div>母親節特惠 - 2019.06.12</div>
+                    </div>
+                    <div class="relationgrid relationbody">
+                        <div>
+                            <div class="imgbox"></div>
+                            <div>小甲</div>
+                        </div>
+                   
+                        <div>53</div>
+                        <div>15</div>
+                        <div>5400</div>
+                        <div>母親節特惠 - 2019.06.12</div>
+                    </div>
+                    <div class="relationgrid relationbody">
+                        <div>
+                            <div class="imgbox"></div>
+                            <div>小甲</div>
+                        </div>
+                 
+                        <div>53</div>
+                        <div>15</div>
+                        <div>5400</div>
+                        <div>母親節特惠 - 2019.06.12</div>
+                    </div>
+                    <div class="relationgrid relationbody">
+                        <div>
+                            <div class="imgbox"></div>
+                            <div>小甲</div>
+                        </div>
+         
+                        <div>53</div>
+                        <div>15</div>
+                        <div>5400</div>
+                        <div>母親節特惠 - 2019.06.12</div>
+                    </div>
+
+                </div>
+
+
+                <nav class="navigation" aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true"><i class="fas fa-caret-left"></i></span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true"><i class="fas fa-caret-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        $('input[name="relation"]').daterangepicker({
+            "locale": {
+                "format": "YYYY.MM",
+                "separator": " ~ ",
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

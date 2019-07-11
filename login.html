@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ark直播列表</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.css' />
+    <link rel="stylesheet" href="./dist/font.css">
+    <link rel="stylesheet" href="./dist/style/style.min.css">
+</head>
+
+<body class="nama">
+    <div class="container">
+        <div class="left">
+            <div class="menubar">
+                <img src="./imges/arkbeez.svg" alt="">
+                <span></span>
+            </div>
+            <div class="relative">
+                <div class="topbar">
+                    <div class="userphoto">
+                        <div>
+                        </div>
+                    </div>
+                    <div class="editbutton">
+                        <span onclick="location.href='./index.html'" class="icon-plus-sign-in-a-black-circle"></span>
+                        <span onclick="location.href='./nama.html'" class="icon-list"></span>
+                        <span onclick="location.href='./relationshelp.html'" class="icon-group"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width:100%; background-color: #f7f7f7;">
+            <div class="login">
+                <div class="memebertext">
+                    <h3>會員登入</h3>
+                    <span>尚未有帳戶?<a href="#">註冊</a></span>
+                </div>
+                
+                <div class="logininput">
+                    <p>帳號</p>
+                    <input type="text">
+                </div>
+                <div class="logininput">
+                    <p>密碼</p>
+                    <input type="password">
+                </div>
+                <div class="remeber">
+                    <span><input type="checkbox">記住我的帳號</span>
+                    <span>忘記密碼?</span>
+                </div>
+                <div class="loginbutton" onclick="location.href='./index.html'">登入</div>
+                <div class="otherlogin">
+                    <div> <span class="span1"></span><span class="span2"></span> LINE 登入</div>
+                    <div><span class="span1"></span><span class="span2"></span>FACEBOOK登入</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        $('input[name="daterange"]').daterangepicker({
+            "locale": {
+                "format": "YYYY/MM",
+                "separator": " ~ ",
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
