@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
+  font-family: "微軟正黑體", "Microsoft JhengHei",arial,sans-serif;
+  font-size: 14px;
 }
 
 .drp-calendar.right {
@@ -103,7 +104,7 @@ body {
   -ms-grid-columns: 140px 345px;
       grid-template-columns: 140px 345px;
   background: #ffca00;
-  height: 100px;
+  height: 65px;
 }
 
 .userphoto {
@@ -123,8 +124,8 @@ body {
   background-color: #fff;
   background: url(../../imges/head.jpg) no-repeat center;
   background-size: cover;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
 }
 
 .editbutton {
@@ -144,10 +145,10 @@ body {
   cursor: pointer;
   border-radius: 50%;
   background-color: #000;
-  height: 50px;
-  width: 50px;
-  margin: 0 15px;
-  font-size: 50px;
+  height: 30px;
+  width: 30px;
+  margin: 0 25px;
+  font-size: 30px;
 }
 
 .relative {
@@ -167,7 +168,7 @@ body {
 }
 
 .editcontent > div {
-  padding: 50px 30px 0;
+  padding: 20px 30px 0;
 }
 
 .grid {
@@ -196,7 +197,6 @@ body {
           align-items: center;
   width: 90px;
   height: 40px;
-  font-family: PingFangTC;
   font-size: 15px;
   color: #4e4e4e;
 }
@@ -211,7 +211,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: PingFangTC;
   font-size: 20px;
   letter-spacing: 0.17px;
   color: #24253d;
@@ -264,13 +263,13 @@ body {
 
 .mainiput {
   position: relative;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .mainiput > i {
   position: absolute;
   right: 10px;
-  top: 18px;
+  top: 11px;
   font-size: 18px;
 }
 
@@ -280,7 +279,7 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #f2f2f2;
-  height: 50px;
+  height: 40px;
   padding: 20px;
 }
 
@@ -291,8 +290,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: PingFangTC;
-  font-size: 17px;
+  font-size: 14px;
   letter-spacing: 0.14px;
   color: #505050;
 }
@@ -300,7 +298,8 @@ body {
 .mainiput .buttonarea {
   position: relative;
   background-color: #f2f2f2;
-  height: 50px;
+  height: 40px;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,10 +322,10 @@ body {
   height: 100%;
   text-align: center;
   color: #bcbcbc;
+  font-size: 12px;
 }
 
 .mainiput .buttonarea span i {
-  font-family: PingFangTC;
   font-size: 12px;
   letter-spacing: 0.08px;
   text-align: center;
@@ -386,7 +385,6 @@ body {
 }
 
 .maintextarea span {
-  font-family: PingFangTC;
   font-size: 12px;
   letter-spacing: 0.08px;
   color: #bcbcbc;
@@ -545,7 +543,6 @@ body {
 }
 
 .productbutton span {
-  font-family: PingFangTC;
   font-size: 12px;
   text-align: center;
   color: #ffffff;
@@ -677,7 +674,6 @@ body {
 .contentbox p, .contentbox span {
   line-height: 12px;
   margin: 0;
-  font-family: PingFangTC;
   font-size: 12px;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -690,7 +686,6 @@ body {
 }
 
 .contentbox .contenttitle {
-  font-family: PingFangTC;
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 8px;
@@ -880,14 +875,12 @@ body {
 
 .newitem > p {
   margin: 0;
-  font-family: PingFangTC;
   font-size: 26px;
   font-weight: 600;
 }
 
 .newitem > span {
   margin: 0;
-  font-family: PingFangTC;
   font-size: 14px;
   font-weight: 600;
   display: block;
@@ -963,7 +956,6 @@ body {
 }
 
 .itembox .itemtext p {
-  font-family: PingFangTC;
   font-size: 14px;
   margin: 0;
   padding: 0 0 5px 16px;
@@ -971,7 +963,6 @@ body {
 
 .itembox .itemtext span {
   padding: 0 0 2px 16px;
-  font-family: PingFangTC;
   font-size: 12px;
 }
 
@@ -992,7 +983,6 @@ body {
 }
 
 .strat p {
-  font-family: PingFangTC;
   font-size: 26px;
   font-weight: bold;
 }
@@ -1115,7 +1105,6 @@ body {
 
 .gamecontentbase span {
   display: block;
-  font-family: PingFangTC;
   font-size: 14px;
   color: #505050;
   margin-top: 10px;
@@ -1318,7 +1307,6 @@ body {
   border: 0;
   outline: 0;
   height: 32px;
-  font-family: PingFangTC;
   width: 100%;
   margin-right: 30px;
 }
@@ -1326,7 +1314,7 @@ body {
 .livecentent {
   position: absolute;
   left: 0;
-  height: calc( 100% - 100px);
+  height: calc( 100% - 50px);
   position: relative;
 }
 
@@ -1357,7 +1345,6 @@ body {
 }
 
 .livecentent header div {
-  font-family: PingFangTC;
   font-size: 16px;
   color: #fff;
   padding: 10px 0;
@@ -1409,7 +1396,6 @@ body {
   text-align: center;
   width: 100%;
   font-size: 17px;
-  font-family: PingFangTC;
   color: #6d6d6d;
   padding: 5px;
   cursor: pointer;
@@ -1457,7 +1443,6 @@ body {
 
 .productinfotop span {
   display: none;
-  font-family: PingFangTC;
   font-size: 12px;
   color: #fff;
   width: 70px;
@@ -1485,7 +1470,6 @@ body {
 
 .imgbox span {
   display: none;
-  font-family: PingFangTC;
   font-size: 12px;
   color: #fff;
   width: 70px;
@@ -1582,7 +1566,6 @@ body {
   display: none;
   white-space: nowrap;
   position: relative;
-  font-family: PingFangTC;
   font-size: 12px;
   letter-spacing: 0.09px;
   color: #747474;
@@ -1616,7 +1599,6 @@ body {
 }
 
 .change > p {
-  font-family: PingFangTC;
   font-size: 26px;
   font-weight: 500;
   letter-spacing: 0.22px;
@@ -1935,7 +1917,6 @@ body {
 }
 
 .listgrid > div {
-  font-family: PingFangTC;
   margin: 30px 0;
   color: #555555;
   font-size: 20px;
@@ -1977,6 +1958,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 0 20px;
 }
 
 .listbody div:nth-last-of-type(1) {
@@ -2244,14 +2226,15 @@ body {
 .allviewgrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 180px  80px 80px;
-      grid-template-columns: 1fr 180px  80px 80px;
+  -ms-grid-columns: 1fr 180px  100px 100px;
+      grid-template-columns: 1fr 180px  100px 100px;
   height: 40px;
   background-color: #fe9191;
   color: #fff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
 }
 
 .allviewgrid div:nth-of-type(1) {
@@ -2801,10 +2784,11 @@ body {
   height: 50px;
   margin-bottom: 5px;
   border: 2px solid #fff;
+  color: white;
 }
 
 .otherlogin > div:nth-of-type(1) {
-  background-color: #f0c018;
+  background-color: #00b902;
 }
 
 .otherlogin > div:nth-of-type(1)::after {
@@ -2829,7 +2813,6 @@ body {
 
 .otherlogin > div:nth-of-type(2) {
   background-color: #3e5a98;
-  color: white;
 }
 
 .otherlogin > div:nth-of-type(2)::after {

@@ -2,7 +2,8 @@ $yellow:#ffca00;
 $right:88px;
 $margin:5px;
 body{
-    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
+    font-family:"微軟正黑體", "Microsoft JhengHei",arial,sans-serif;
+    font-size: 14px;
 }
 .drp-calendar.right{
         width: unset;
@@ -86,7 +87,8 @@ body{
     display: grid;
     grid-template-columns: 140px 345px;
     background: $yellow;
-    height: 100px;
+    height: 65px;
+    
 }
 .userphoto{
     display: flex;
@@ -97,8 +99,8 @@ body{
         background-color: #fff;
         background: url(../../imges/head.jpg) no-repeat center;
         background-size: cover;
-        height: 50px;
-        width: 50px;
+        height: 35px;
+        width: 35px;
     }
    
 }
@@ -112,10 +114,10 @@ body{
         cursor: pointer;
         border-radius: 50%;
         background-color: #000;
-        height: 50px;
-        width: 50px;
-        margin: 0 15px;
-        font-size: 50px;
+        height: 30px;
+        width: 30px;
+        margin: 0 25px;
+        font-size: 30px;
     }
 
 }
@@ -133,12 +135,13 @@ body{
     display: block;
     transition: all 1s;
     >div{
-        padding: 50px 30px 0;
+        padding: 20px 30px 0;
     }
 }
 .grid{
     display: grid;
     grid-template-columns:120px 1fr;
+   
 }
 .readyblock{
     border-bottom: 1px solid #999;
@@ -151,7 +154,7 @@ body{
         align-items: center;
         width: 90px;
         height: 40px;
-        font-family: PingFangTC;
+        
         font-size: 15px;
         color: #4e4e4e;
     }
@@ -161,7 +164,7 @@ body{
         margin: 0;
         display: flex;
         align-items: center;
-        font-family: PingFangTC;
+        
         font-size: 20px;
         letter-spacing: 0.17px;
         color: #24253d;
@@ -196,11 +199,11 @@ body{
 
 .mainiput{
     position: relative;
-    margin-top: 18px;
+    margin-top: 12px;
     >i{
        position: absolute;
         right: 10px;
-        top: 18px;
+        top: 11px;
         font-size: 18px;
     }
     input{
@@ -208,14 +211,14 @@ body{
         outline: 0;
         box-shadow: none;
         background-color: #f2f2f2;
-        height: 50px;
+        height: 40px;
         padding: 20px;
     }
     div{
         display: flex;
         align-items: center;
-        font-family: PingFangTC;
-        font-size: 17px;
+        
+        font-size: 14px;
         letter-spacing: 0.14px;
         color: #505050;
     }
@@ -223,7 +226,8 @@ body{
     .buttonarea{
     position: relative;
     background-color:#f2f2f2;
-    height: 50px;
+    height: 40px;
+    font-size: 14px;
     display:flex;
     span{
         cursor: pointer;
@@ -235,8 +239,9 @@ body{
         height: 100%;
         text-align: center;
         color: #bcbcbc;
+        font-size: 12px;
         i{
-            font-family: PingFangTC;
+            
             font-size: 12px;
             letter-spacing: 0.08px;
             text-align: center;
@@ -277,7 +282,7 @@ body{
         justify-content: center;
     }
     span{
-        font-family: PingFangTC;
+        
         font-size: 12px;
         letter-spacing: 0.08px;
         color: #bcbcbc;
@@ -398,7 +403,7 @@ body{
     margin-top: 35px;
     margin-bottom: 20px;
    span{
-    font-family: PingFangTC;
+    
     font-size: 12px;
     text-align: center;
     color: #ffffff;
@@ -502,7 +507,7 @@ body{
     p,span{
         line-height: 12px;
         margin: 0;
-        font-family: PingFangTC;
+        
         font-size: 12px;
         margin-bottom: 5px;
         letter-spacing: 2px;
@@ -514,7 +519,7 @@ body{
 
     }
     .contenttitle{
-    font-family: PingFangTC;
+    
     font-size: 14px;
     line-height: 14px;
     margin-bottom: 8px;
@@ -668,13 +673,13 @@ body{
     padding: 44px 60px;
     >p{
         margin: 0;
-        font-family: PingFangTC;
+        
         font-size: 26px;
         font-weight: 600;
     }
     >span{
         margin: 0;
-        font-family: PingFangTC;
+        
         font-size: 14px;
         font-weight: 600; 
         display: block;
@@ -730,14 +735,14 @@ body{
         display: flex;
         flex-direction: column;
       p{
-        font-family: PingFangTC;
+        
         font-size: 14px;
         margin: 0;
         padding: 0 0 5px 16px;
       }
       span{
         padding: 0 0 2px 16px;
-        font-family: PingFangTC;
+        
         font-size: 12px;
       }
   }
@@ -749,7 +754,7 @@ body{
     flex-direction: column;
     align-self: center;
     p{
-      font-family: PingFangTC;
+      
         font-size: 26px;
         font-weight: bold;   
     }
@@ -851,7 +856,7 @@ body{
 .gamecontentbase{
     span{
         display: block;
-        font-family: PingFangTC;
+        
         font-size: 14px;
         color: #505050;
         margin-top: 10px;
@@ -1020,7 +1025,7 @@ body{
         border: 0;
         outline: 0;
         height: 32px;
-        font-family: PingFangTC;
+        
         width: 100%;
         margin-right: 30px;
     }
@@ -1028,7 +1033,7 @@ body{
 .livecentent{
     position: absolute;
     left: 0;
-    height: calc( 100% - 100px );
+    height: calc( 100% - 50px );
     >div{
         padding: 7px 0px 20px 9px;
         height: 100%;
@@ -1051,7 +1056,7 @@ body{
     header {
         background-color: #fe9191;
         div{
-        font-family: PingFangTC;
+        
         font-size: 16px;
         color: #fff;
         padding: 10px 0;
@@ -1098,7 +1103,7 @@ body{
             text-align: center;
             width: 100%;
             font-size: 17px;
-            font-family: PingFangTC;
+            
             color: #6d6d6d;
             padding: 5px;
             cursor: pointer;
@@ -1134,7 +1139,7 @@ body{
     grid-column-gap: 25px;
     span{
     display: none;
-    font-family: PingFangTC;
+    
     font-size: 12px;
     color: #fff;
     width: 70px;
@@ -1165,7 +1170,7 @@ body{
     position: relative;
     span{
     display: none;
-    font-family: PingFangTC;
+    
     font-size: 12px;
     color: #fff;
     width: 70px;
@@ -1242,7 +1247,7 @@ body{
     display: none;
     white-space: nowrap;
     position: relative;
-    font-family: PingFangTC;
+    
   font-size: 12px;
   letter-spacing: 0.09px;
   color: #747474;
@@ -1276,7 +1281,7 @@ body{
         margin-top: 40px;
     }
     >p{
-      font-family: PingFangTC;
+      
         font-size: 26px;
         font-weight: 500;
         letter-spacing: 0.22px;
@@ -1538,7 +1543,7 @@ body{
     background-color: white;
     box-shadow: 0px 0px 5px #c9c9c9;
     >div{
-        font-family: PingFangTC;
+        
         margin: 30px 0;
         color: #555555;
         font-size: 20px;
@@ -1573,6 +1578,7 @@ body{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            padding: 0 20px;
         }
          &:nth-last-of-type(1){
              padding: 0;
@@ -1793,11 +1799,12 @@ body{
 }
 .allviewgrid{
     display: grid;
-    grid-template-columns: 1fr 180px  80px 80px;
+    grid-template-columns: 1fr 180px  100px 100px;
     height: 40px;
     background-color: #fe9191;
     color: #fff;
     align-items: center;
+    justify-items: center;
     div:nth-of-type(1){
         padding-left: 30px
     }
@@ -2230,8 +2237,9 @@ body{
     height: 50px;
     margin-bottom: 5px; 
     border: 2px solid #fff;
+    color:white;
     &:nth-of-type(1){
-        background-color: #f0c018;
+        background-color: #00b902;
         &::after{
             content: "";
             position: absolute;
@@ -2254,7 +2262,7 @@ body{
     }
     &:nth-of-type(2){
         background-color:#3e5a98;
-        color:white;
+        
          &::after{
             content: "";
             position: absolute;
