@@ -1,10 +1,13 @@
 $yellow:#ffca00;
 $right:88px;
 $margin:5px;
+$box-shadow:0 6px 20px 0 #ececec;
+
 body{
     font-family:"微軟正黑體", "Microsoft JhengHei",arial,sans-serif;
     font-size: 14px;
 }
+
 .drp-calendar.right{
         width: unset;
         background-color: #fff;
@@ -20,7 +23,7 @@ body{
     .typetimestart,.typetimeend,.typetimeclean{
     width: 88px;
     display: inline-block;
-
+        top: 0px;
     padding: 4px 8px;
     font-size: 12px;
     text-align: center;
@@ -45,6 +48,7 @@ body{
 }
 
 .container{
+
     padding: 0;
     display: flex;
     height: 100vh;
@@ -199,7 +203,7 @@ body{
 
 .mainiput{
     position: relative;
-    margin-top: 12px;
+    margin-top: 15px;
     >i{
        position: absolute;
         right: 10px;
@@ -313,16 +317,20 @@ body{
 
 .right{
     width: 100%;
+    overflow: hidden;
     background-color: #f7f7f7;
     >div{
-        margin: 50px 20px 0; 
+        margin: 15px 20px 0; 
     }
 }
+
 .product{
+   
+   
     background-color: #fff;
     padding: 20px 30px;
     border-radius: 20px;
-    box-shadow: 0px 0px 6px grey;
+    box-shadow: $box-shadow;
     >div{
         display: flex;
     }
@@ -336,13 +344,14 @@ body{
 .productinfo{
     background-color:  #f7f7f7;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .productgrid{
     display: grid;
     grid-template-columns: 80px 1fr;
-    grid-template-rows: 45px;
+    grid-template-rows: 30px;
+    margin-bottom: 5px;
     >div{
         display: flex;
         align-items: center;
@@ -367,7 +376,7 @@ body{
     }
     input{
         padding-left: 5px;
-        height: 30px;
+        height: 100%;
         width: 120px;
         border: 0;
         outline: 0;
@@ -461,17 +470,29 @@ body{
         text-align: center;
     }
 }
+.hde{
+    overflow: hidden;
+}
+.modal-content{
+    border: 0;
+    border-radius: 30px;
+}
 .productcontent{
+    // overflow: hidden;
+    .swiper-slide{
+        max-width: 140px;
+        min-width: 140px;
+        width: 100%;
+    }
     position: relative;
-    width: 400px;
+    width: auto;
     height: 100%;
     margin-left: 35px;
     margin-right: 10px;
     display: flex;
-    >div{
-        margin-right: 5px;
-        padding-top: 2px;
-        padding-left: 2px;
+    .swiper-product{
+        margin-right: 0px;
+        padding: 2px;
     }
     .icon-plus-sign-in-a-black-circle{
         cursor: pointer;
@@ -484,7 +505,7 @@ body{
     }
 }
 .imgbox{
-    height: 88px;
+    height: 75px;
     background-color: orange;
     img{
         width: 100%;
@@ -513,7 +534,7 @@ body{
         letter-spacing: 2px;
     }
     
-    padding: 15px 10px;
+    padding:10px;
     >div{
         display: flex;
 
@@ -522,19 +543,20 @@ body{
     
     font-size: 14px;
     line-height: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 600;
     }
 }
 
 
 .game{
+    
 
-    margin-top: 30px;
+    margin-top: 15px;
     background-color: #fff;
     padding: 20px 35px;
     border-radius: 20px;
-    box-shadow: 0px 0px 6px grey;
+    box-shadow: $box-shadow;
      h3{
         font-weight: bold;
         font-size: 20px;
@@ -630,15 +652,16 @@ body{
 .ready{
     visibility: hidden;
 }
-.gamewidth{
-    width: 640px;
+.swiper-container{
+    margin: 0;
 }
 .gamecontent{
     position: relative;
     >span{
         cursor: pointer;
         position: absolute;
-        right: -15px;
+        right: -20px;
+        top: 3px;
         font-size: 18px;
         &::before{
             color: #ff0000;
@@ -648,7 +671,7 @@ body{
 .mainbutton{
     display: flex;
     justify-content: flex-end;
-    margin-top: 40px;
+    margin-top: 20px;
     div{
         cursor: pointer;
         font-size: 18px;
@@ -666,11 +689,16 @@ body{
 }
 
 
-
+.fixedbutton{
+    position: fixed;
+    right: 30px;
+    bottom: 15px;
+    z-index: 9;
+}
 
 
 .newitem{
-    padding: 44px 60px;
+    padding: 25px 40px;
     >p{
         margin: 0;
         
@@ -693,17 +721,22 @@ body{
             outline: 0;
             border: 0;
             background-color: #ececec;
-            padding: 8px 15px ;
+            padding: 8px 25px ;
         }
 
         input{
              outline: 0;
             border: 0;
             background-color: #ececec;
-            
-            padding: 8px 15px ;
+            padding: 8px 25px ;
+            &::placeholder{
+                color: #acacac;
+            }
         }
         
+    }
+    .mainbutton div{
+        padding: 10px 30px;
     }
 }
 .mdbody{
@@ -783,7 +816,7 @@ body{
     }
 }
 .gamemodal{
-    margin: 40px 50px;
+    margin: 30px 50px;
 }
 .gamemodeltitle{
     p{
@@ -860,7 +893,7 @@ body{
         font-size: 14px;
         color: #505050;
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         padding-bottom: 16px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.43);
     }
@@ -938,7 +971,7 @@ body{
     margin-right: 6px;
 }
 .container{
-    max-width: 1350px;
+    max-width: 100%;
 }
 .icon-pencil,.icon-cancel-button{
     cursor: pointer;
@@ -953,7 +986,8 @@ body{
     background-color: #fff;
     padding-top: 5px;
     display: grid;
-    grid-template-rows: 350px 50px;
+    grid-template-rows: 300px 50px;
+     margin-bottom: 5px;
     .fbgrid{
         display: grid;
         grid-template-columns: 1fr 185px;
@@ -961,6 +995,8 @@ body{
     }
     .fbiframe{
         width: 100%;
+        max-height: 300px;
+        height: 100%;
         position: relative;
         img{
             width: 100%;
@@ -983,7 +1019,24 @@ body{
         }
     }
     .fborder{
-        max-height: 350px;
+         &::-webkit-scrollbar-track
+        {	border-radius: 10px;
+        	background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar
+        {
+        	width: 12px;
+        	background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            border: 2px solid #f6f6f6;
+        	background-color: #fff;
+        }
+        max-height: 300px;
         overflow-y: auto;
        >p{
             font-size: 12px;
@@ -1033,13 +1086,13 @@ body{
 .livecentent{
     position: absolute;
     left: 0;
-    height: calc( 100% - 50px );
+    height: calc( 100% - 65px );
     >div{
         padding: 7px 0px 20px 9px;
         height: 100%;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 10px;
+        display: flex;
+        flex-direction: column;
+       
     }
     position: relative;
     &::after{
@@ -1084,7 +1137,7 @@ body{
             border: 2px solid #f6f6f6;
         	background-color: #fff;
         }
-        max-height: 250px;
+        max-height: 200px;
         overflow-y: auto;
         >div{
             background-color: #f6f6f6;
@@ -1442,16 +1495,14 @@ body{
         .rightconerbutton{
             float: right;
             margin-top: 40px;
-            margin-bottom: 80px;
+            margin-bottom: 30px;
         }
-        .listsearchbar{
-            margin-bottom: 35px;
-        }
+
         .listcontent{
             margin-top: 15px;
             overflow-y:auto;
-            max-height: 485px;
-            box-shadow: 0px 0px 5px #c9c9c9;
+            max-height: 360px;
+            box-shadow: $box-shadow;
             &::-webkit-scrollbar-track
             {	border-radius: 10px;
             	background-color: #F5F5F5;
@@ -1498,14 +1549,15 @@ body{
 }
 
 .listsearchbar{
+    margin-bottom: 15px;
     clear:both;
     display: flex;
     align-items: center;
     width: 100%;
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0px 0px 8px #c9c9c9;
-    padding: 30px 55px;
+    box-shadow: $box-shadow;
+    padding: 15px 30px;
     .fa-search{
         font-size: 22px;
         margin-right: 20px;
@@ -1515,14 +1567,15 @@ body{
         width: 100%;
         border: 0;
         outline: 0;
-        font-size: 20px;
-        color: #828282;
+        font-size: 14px;
+        color: #C0BFC5;
         border-right: 2px solid #ececec; 
         &::placeholder {
         color: #828282;
         }
     }
     p{
+        width: 250px;
         position: relative;
         margin: 0;
         color: #828282;
@@ -1541,12 +1594,12 @@ body{
     display: grid;
     grid-template-columns: 1fr 170px 170px 170px  1fr;
     background-color: white;
-    box-shadow: 0px 0px 5px #c9c9c9;
+    box-shadow:$box-shadow;
     >div{
         
-        margin: 30px 0;
+        margin: 20px 0;
         color: #555555;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 600;
         text-align: center;
         border-right: 1px solid #cacaca;
@@ -1572,7 +1625,7 @@ body{
     div{
         border: 0;
         &:nth-of-type(3),&:nth-of-type(2){
-            color: #ececec;
+            color: #C0BFC5;
         }
         &:nth-of-type(4){
             overflow: hidden;
@@ -1602,7 +1655,7 @@ body{
         div{
             color: black;
             &:nth-of-type(3),&:nth-of-type(5){
-            color: #ececec;
+            color: #C0BFC5;
             }
             &:nth-of-type(4){
                 display: flex;
@@ -1646,7 +1699,7 @@ body{
     >div{
         background-color: #fff;
         border-radius: 20px;
-         box-shadow: 0 0 8px gray;
+         box-shadow:$box-shadow;
         padding: 30px;
     }
     .f1{
@@ -1823,12 +1876,12 @@ body{
     background-color: #fff;
     border-radius: 20px;
     align-items: center;
-    box-shadow: 0 0 5px gray;
-    padding: 20px 50px;
+    box-shadow:$box-shadow;
+    padding: 15px 30px;
     clear: both;
     display: grid;
-    grid-template-columns: 1fr 300px 150px;
-    margin-bottom: 25px;
+    grid-template-columns: 1fr 340px 150px;
+    margin-bottom: 15px;
     h3{
         color: #cd5d5d;
         font-size: 30px;
@@ -1872,7 +1925,7 @@ body{
         }
     }
     .listcontainer .rightconerbutton{
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
    .listcontainer .listcontent{
        background-color: #fff;
@@ -1893,8 +1946,8 @@ body{
                 display: flex;
                 align-items: center;
                 >div{
-                    height: 50px;
-                    width: 50px;
+                    height: 40px;
+                    width: 40px;
                     background: url('../../imges/justin.png') no-repeat center;
                     margin-right: 10px;
                     background-size: cover;
@@ -1902,7 +1955,7 @@ body{
                 color: #363636;
             }
             &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7){
-                color: #ececec;
+                color: #C0BFC5;
             }
             &:nth-last-of-type(1){
                 padding-left: 25px;
@@ -1946,9 +1999,9 @@ body{
     grid-template-columns: 350px 1fr  auto auto  auto;
     background-color: #fff; 
     border-radius: 20px;
-    padding: 30px 50px;
+    padding: 15px 30px;
     align-items: center;
-     box-shadow: 0 6px 20px  #ececec;
+     box-shadow:$box-shadow;
     >div{
         height: 100%;
         border-right: 2px solid #f7f7f7;
@@ -1990,7 +2043,7 @@ body{
         }
         i,p,input,select{
             color: #555555;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 32px;
         }
     }
@@ -2002,21 +2055,27 @@ body{
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
-    padding: 30px 25px;
+    padding: 15px 25px;
     background-color: #fff; 
 
     >div{
+        cursor: pointer;
         border-right: 1px solid #f7f7f7;
         display: flex;
         justify-content: center;
         &:nth-last-of-type(1){
             border: 0;
         }
+        i{
+            font-size: 14px;
+            line-height: 22px;
+            padding-left: 10px;
+        }
     }
     select{
         color: #555555;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 14px;
         border: 0;
         outline: 0;
     }
@@ -2055,8 +2114,8 @@ body{
             display: flex;
             align-items: center;
             .imgbox{
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 50%;
                 background: url(../../imges/justin.png) no-repeat center;
                 background-size: cover;
@@ -2090,7 +2149,7 @@ body{
 
 .special{
     .relationtop{
-        padding: 20px;
+        padding: 15px 20px;
         width: 100%;
         grid-template-columns: 1fr 120px 120px  1fr 1fr 70px;
 
@@ -2123,6 +2182,7 @@ body{
     clear: both;
     display: grid;
     grid-template-columns: 230px 1fr;
+    
     grid-column-gap: 30px;
 }
 
@@ -2136,12 +2196,12 @@ body{
     justify-content: center;
     p{
         margin: 0;
-        font-size: 20px;
+        font-size: 14px;
         color: #828282;
     }
     i{
-        font-size: 25px;
-        margin-right: 25px;
+        font-size: 20px;
+        margin-right: 20px;
         margin-bottom: 1px;
     }
     .change>p{

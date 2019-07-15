@@ -22,6 +22,7 @@ body {
 .gamecontent .typetimestart, .gamecontent .typetimeend, .gamecontent .typetimeclean {
   width: 88px;
   display: inline-block;
+  top: 0px;
   padding: 4px 8px;
   font-size: 12px;
   text-align: center;
@@ -263,7 +264,7 @@ body {
 
 .mainiput {
   position: relative;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .mainiput > i {
@@ -417,19 +418,20 @@ body {
 
 .right {
   width: 100%;
+  overflow: hidden;
   background-color: #f7f7f7;
 }
 
 .right > div {
-  margin: 50px 20px 0;
+  margin: 15px 20px 0;
 }
 
 .product {
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 6px grey;
-          box-shadow: 0px 0px 6px grey;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
 }
 
 .product > div {
@@ -448,7 +450,7 @@ body {
 .productinfo {
   background-color: #f7f7f7;
   padding: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .productgrid {
@@ -456,8 +458,9 @@ body {
   display: grid;
   -ms-grid-columns: 80px 1fr;
       grid-template-columns: 80px 1fr;
-  -ms-grid-rows: 45px;
-      grid-template-rows: 45px;
+  -ms-grid-rows: 30px;
+      grid-template-rows: 30px;
+  margin-bottom: 5px;
 }
 
 .productgrid > div {
@@ -495,7 +498,7 @@ body {
 
 .productgrid input {
   padding-left: 5px;
-  height: 30px;
+  height: 100%;
   width: 120px;
   border: 0;
   outline: 0;
@@ -614,9 +617,18 @@ body {
   text-align: center;
 }
 
+.hde {
+  overflow: hidden;
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 30px;
+}
+
 .productcontent {
   position: relative;
-  width: 400px;
+  width: auto;
   height: 100%;
   margin-left: 35px;
   margin-right: 10px;
@@ -625,10 +637,15 @@ body {
   display: flex;
 }
 
-.productcontent > div {
-  margin-right: 5px;
-  padding-top: 2px;
-  padding-left: 2px;
+.productcontent .swiper-slide {
+  max-width: 140px;
+  min-width: 140px;
+  width: 100%;
+}
+
+.productcontent .swiper-product {
+  margin-right: 0px;
+  padding: 2px;
 }
 
 .productcontent .icon-plus-sign-in-a-black-circle {
@@ -643,7 +660,7 @@ body {
 }
 
 .imgbox {
-  height: 88px;
+  height: 75px;
   background-color: orange;
 }
 
@@ -668,7 +685,7 @@ body {
 
 .contentbox {
   margin-bottom: 10px;
-  padding: 15px 10px;
+  padding: 10px;
 }
 
 .contentbox p, .contentbox span {
@@ -688,17 +705,17 @@ body {
 .contentbox .contenttitle {
   font-size: 14px;
   line-height: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .game {
-  margin-top: 30px;
+  margin-top: 15px;
   background-color: #fff;
   padding: 20px 35px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 6px grey;
-          box-shadow: 0px 0px 6px grey;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
 }
 
 .game h3 {
@@ -825,8 +842,8 @@ body {
   visibility: hidden;
 }
 
-.gamewidth {
-  width: 640px;
+.swiper-container {
+  margin: 0;
 }
 
 .gamecontent {
@@ -836,7 +853,8 @@ body {
 .gamecontent > span {
   cursor: pointer;
   position: absolute;
-  right: -15px;
+  right: -20px;
+  top: 3px;
   font-size: 18px;
 }
 
@@ -851,7 +869,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .mainbutton div {
@@ -869,8 +887,15 @@ body {
   background-color: #b31b00;
 }
 
+.fixedbutton {
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  z-index: 9;
+}
+
 .newitem {
-  padding: 44px 60px;
+  padding: 25px 40px;
 }
 
 .newitem > p {
@@ -899,14 +924,34 @@ body {
   outline: 0;
   border: 0;
   background-color: #ececec;
-  padding: 8px 15px;
+  padding: 8px 25px;
 }
 
 .newitem .select input {
   outline: 0;
   border: 0;
   background-color: #ececec;
-  padding: 8px 15px;
+  padding: 8px 25px;
+}
+
+.newitem .select input::-webkit-input-placeholder {
+  color: #acacac;
+}
+
+.newitem .select input:-ms-input-placeholder {
+  color: #acacac;
+}
+
+.newitem .select input::-ms-input-placeholder {
+  color: #acacac;
+}
+
+.newitem .select input::placeholder {
+  color: #acacac;
+}
+
+.newitem .mainbutton div {
+  padding: 10px 30px;
 }
 
 .mdbody {
@@ -1019,7 +1064,7 @@ body {
 }
 
 .gamemodal {
-  margin: 40px 50px;
+  margin: 30px 50px;
 }
 
 .gamemodeltitle p {
@@ -1108,7 +1153,7 @@ body {
   font-size: 14px;
   color: #505050;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.43);
 }
@@ -1204,7 +1249,7 @@ body {
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 100%;
 }
 
 .icon-pencil, .icon-cancel-button {
@@ -1220,8 +1265,9 @@ body {
   padding-top: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 350px 50px;
-      grid-template-rows: 350px 50px;
+  -ms-grid-rows: 300px 50px;
+      grid-template-rows: 300px 50px;
+  margin-bottom: 5px;
 }
 
 .fbcontent .fbgrid {
@@ -1233,6 +1279,8 @@ body {
 
 .fbcontent .fbiframe {
   width: 100%;
+  max-height: 300px;
+  height: 100%;
   position: relative;
 }
 
@@ -1257,8 +1305,24 @@ body {
 }
 
 .fbcontent .fborder {
-  max-height: 350px;
+  max-height: 300px;
   overflow-y: auto;
+}
+
+.fbcontent .fborder::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.fbcontent .fborder::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.fbcontent .fborder::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
 }
 
 .fbcontent .fborder > p {
@@ -1314,18 +1378,20 @@ body {
 .livecentent {
   position: absolute;
   left: 0;
-  height: calc( 100% - 50px);
+  height: calc( 100% - 65px);
   position: relative;
 }
 
 .livecentent > div {
   padding: 7px 0px 20px 9px;
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  grid-row-gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .livecentent::after {
@@ -1355,7 +1421,7 @@ body {
 }
 
 .livecentent main {
-  max-height: 250px;
+  max-height: 200px;
   overflow-y: auto;
 }
 
@@ -1778,19 +1844,15 @@ body {
 .nama .listcontainer .rightconerbutton {
   float: right;
   margin-top: 40px;
-  margin-bottom: 80px;
-}
-
-.nama .listcontainer .listsearchbar {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .nama .listcontainer .listcontent {
   margin-top: 15px;
   overflow-y: auto;
-  max-height: 485px;
-  -webkit-box-shadow: 0px 0px 5px #c9c9c9;
-          box-shadow: 0px 0px 5px #c9c9c9;
+  max-height: 360px;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
 }
 
 .nama .listcontainer .listcontent::-webkit-scrollbar-track {
@@ -1844,6 +1906,7 @@ body {
 }
 
 .listsearchbar {
+  margin-bottom: 15px;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1854,9 +1917,9 @@ body {
   width: 100%;
   background-color: #fff;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 8px #c9c9c9;
-          box-shadow: 0px 0px 8px #c9c9c9;
-  padding: 30px 55px;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
+  padding: 15px 30px;
 }
 
 .listsearchbar .fa-search {
@@ -1869,8 +1932,8 @@ body {
   width: 100%;
   border: 0;
   outline: 0;
-  font-size: 20px;
-  color: #828282;
+  font-size: 14px;
+  color: #C0BFC5;
   border-right: 2px solid #ececec;
 }
 
@@ -1891,6 +1954,7 @@ body {
 }
 
 .listsearchbar p {
+  width: 250px;
   position: relative;
   margin: 0;
   color: #828282;
@@ -1912,14 +1976,14 @@ body {
   -ms-grid-columns: 1fr 170px 170px 170px  1fr;
       grid-template-columns: 1fr 170px 170px 170px  1fr;
   background-color: white;
-  -webkit-box-shadow: 0px 0px 5px #c9c9c9;
-          box-shadow: 0px 0px 5px #c9c9c9;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
 }
 
 .listgrid > div {
-  margin: 30px 0;
+  margin: 20px 0;
   color: #555555;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   border-right: 1px solid #cacaca;
@@ -1951,7 +2015,7 @@ body {
 }
 
 .listbody div:nth-of-type(3), .listbody div:nth-of-type(2) {
-  color: #ececec;
+  color: #C0BFC5;
 }
 
 .listbody div:nth-of-type(4) {
@@ -1987,7 +2051,7 @@ body {
 }
 
 .history .listbody div:nth-of-type(3), .history .listbody div:nth-of-type(5) {
-  color: #ececec;
+  color: #C0BFC5;
 }
 
 .history .listbody div:nth-of-type(4) {
@@ -2044,8 +2108,8 @@ body {
 .allview > div {
   background-color: #fff;
   border-radius: 20px;
-  -webkit-box-shadow: 0 0 8px gray;
-          box-shadow: 0 0 8px gray;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
   padding: 30px;
 }
 
@@ -2256,15 +2320,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 0 5px gray;
-          box-shadow: 0 0 5px gray;
-  padding: 20px 50px;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
+  padding: 15px 30px;
   clear: both;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 300px 150px;
-      grid-template-columns: 1fr 300px 150px;
-  margin-bottom: 25px;
+  -ms-grid-columns: 1fr 340px 150px;
+      grid-template-columns: 1fr 340px 150px;
+  margin-bottom: 15px;
 }
 
 .saletop h3 {
@@ -2319,7 +2383,7 @@ body {
 }
 
 .sale .listcontainer .rightconerbutton {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .sale .listcontainer .listcontent {
@@ -2351,15 +2415,15 @@ body {
 }
 
 .sale .listbody > div:nth-of-type(2) > div {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: url("../../imges/justin.png") no-repeat center;
   margin-right: 10px;
   background-size: cover;
 }
 
 .sale .listbody > div:nth-of-type(4), .sale .listbody > div:nth-of-type(5), .sale .listbody > div:nth-of-type(6), .sale .listbody > div:nth-of-type(7) {
-  color: #ececec;
+  color: #C0BFC5;
 }
 
 .sale .listbody > div:nth-last-of-type(1) {
@@ -2396,12 +2460,12 @@ body {
       grid-template-columns: 350px 1fr  auto auto  auto;
   background-color: #fff;
   border-radius: 20px;
-  padding: 30px 50px;
+  padding: 15px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 6px 20px  #ececec;
-          box-shadow: 0 6px 20px  #ececec;
+  -webkit-box-shadow: 0 6px 20px 0 #ececec;
+          box-shadow: 0 6px 20px 0 #ececec;
 }
 
 .relationtop > div {
@@ -2472,7 +2536,7 @@ body {
 
 .relationtop > div i, .relationtop > div p, .relationtop > div input, .relationtop > div select {
   color: #555555;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 32px;
 }
 
@@ -2484,11 +2548,12 @@ body {
           align-items: center;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 250px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
-  padding: 30px 25px;
+  padding: 15px 25px;
   background-color: #fff;
 }
 
 .relationgrid > div {
+  cursor: pointer;
   border-right: 1px solid #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2502,10 +2567,16 @@ body {
   border: 0;
 }
 
+.relationgrid > div i {
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 10px;
+}
+
 .relationgrid select {
   color: #555555;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
   border: 0;
   outline: 0;
 }
@@ -2553,8 +2624,8 @@ body {
 }
 
 .relationbody > div:nth-of-type(1) .imgbox {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background: url(../../imges/justin.png) no-repeat center;
   background-size: cover;
@@ -2585,7 +2656,7 @@ body {
 }
 
 .special .relationtop {
-  padding: 20px;
+  padding: 15px 20px;
   width: 100%;
   -ms-grid-columns: 1fr 120px 120px  1fr 1fr 70px;
       grid-template-columns: 1fr 120px 120px  1fr 1fr 70px;
@@ -2657,13 +2728,13 @@ body {
 
 .addnewlist p {
   margin: 0;
-  font-size: 20px;
+  font-size: 14px;
   color: #828282;
 }
 
 .addnewlist i {
-  font-size: 25px;
-  margin-right: 25px;
+  font-size: 20px;
+  margin-right: 20px;
   margin-bottom: 1px;
 }
 
