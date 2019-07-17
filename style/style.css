@@ -456,8 +456,8 @@ body {
 .productgrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80px 1fr;
-      grid-template-columns: 80px 1fr;
+  -ms-grid-columns: 90px 1fr;
+      grid-template-columns: 90px 1fr;
   -ms-grid-rows: 30px;
       grid-template-rows: 30px;
   margin-bottom: 5px;
@@ -481,7 +481,7 @@ body {
 
 .productgrid p, .productgrid span {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1px;
   color: #505050;
   display: -webkit-box;
@@ -503,7 +503,7 @@ body {
   border: 0;
   outline: 0;
   margin: auto;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1px;
   color: #505050;
 }
@@ -522,6 +522,7 @@ body {
 }
 
 .productinfotop i {
+  font-size: 20px;
   width: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -689,9 +690,9 @@ body {
 }
 
 .contentbox p, .contentbox span {
-  line-height: 12px;
+  line-height: 14px;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 5px;
   letter-spacing: 2px;
 }
@@ -738,8 +739,12 @@ body {
   position: relative;
 }
 
+.gameready i {
+  font-size: 20px;
+}
+
 .gameready span {
-  display: block;
+  display: inline-block;
   text-align: center;
   width: 50px;
   color: #fff;
@@ -876,7 +881,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   text-align: center;
-  padding: 20px 55px;
+  padding: 12px 45px;
   border-radius: 50px;
   margin: 0 5px;
   color: #fff;
@@ -1252,7 +1257,8 @@ body {
   max-width: 100%;
 }
 
-.icon-pencil, .icon-cancel-button {
+.icon-pencil, .icon-cancel-button, .icon-list {
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -1692,7 +1698,7 @@ body {
 
 .change .changeedit p {
   margin: 0 20px 0px 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #505050;
 }
 
@@ -1881,8 +1887,8 @@ body {
   cursor: pointer;
   color: black;
   padding: 10px 20px;
-  width: 185px;
-  height: 60px;
+  width: 160px;
+  height: 50px;
   margin: 0 5px;
   background: #fff;
   border: 1px solid #979797;
@@ -2569,7 +2575,7 @@ body {
 
 .relationgrid > div i {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 14px;
   padding-left: 10px;
 }
 
@@ -2678,6 +2684,23 @@ body {
 .special .relationtop > div:nth-of-type(4) input {
   text-align: center;
   padding-left: 15px;
+}
+
+.special .relationgrid {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr  250px 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr  250px 1fr;
+}
+
+.special .relationbody > div:nth-last-of-type(1) {
+  position: relative;
+  color: #f7f7f7;
+}
+
+.special .relationbody > div:nth-last-of-type(1) i {
+  position: absolute;
+  font-size: 20px;
+  line-height: 20px;
+  right: 0;
 }
 
 .special .change > p {

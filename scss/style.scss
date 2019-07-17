@@ -349,7 +349,7 @@ body{
 
 .productgrid{
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 90px 1fr;
     grid-template-rows: 30px;
     margin-bottom: 5px;
     >div{
@@ -364,7 +364,7 @@ body{
     }
     p ,span{
         margin: 0;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1px;
         color: #505050;
         display: flex;
@@ -381,7 +381,7 @@ body{
         border: 0;
         outline: 0;
         margin: auto;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1px;
         color: #505050;
     }
@@ -396,6 +396,7 @@ body{
     font-size: 16px;
     }
     i{
+        font-size: 20px;
         width: 17px;
         display: flex;
         align-items: center;
@@ -526,10 +527,10 @@ body{
 .contentbox{
     margin-bottom: 10px;
     p,span{
-        line-height: 12px;
+        line-height: 14px;
         margin: 0;
         
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 5px;
         letter-spacing: 2px;
     }
@@ -575,8 +576,11 @@ body{
 }
 .gameready{
     position: relative;
+    i{
+        font-size: 20px;
+    }
     span{
-        display: block;
+        display: inline-block;
         text-align: center;
         width: 50px;
         color: #fff;
@@ -676,7 +680,7 @@ body{
         cursor: pointer;
         font-size: 18px;
         text-align: center;
-        padding: 20px 55px;
+        padding: 12px 45px;
         border-radius: 50px;
         margin: 0 5px;
         color: #fff;
@@ -973,7 +977,8 @@ body{
 .container{
     max-width: 100%;
 }
-.icon-pencil,.icon-cancel-button{
+.icon-pencil,.icon-cancel-button,.icon-list{
+    font-size: 20px;
     cursor: pointer;
 }
 .livebutton{
@@ -1354,7 +1359,7 @@ body{
         }
         p{
             margin:0 20px 0px 0; 
-            font-size: 12px;
+            font-size: 14px;
             color: #505050;
         }
         
@@ -1530,8 +1535,8 @@ body{
         cursor: pointer;
         color: black;
         padding: 10px 20px;
-        width: 185px;
-        height: 60px;
+        width: 160px;
+        height: 50px;
         margin: 0 5px;
         background: #fff;
         border: 1px solid #979797;
@@ -2068,7 +2073,7 @@ body{
         }
         i{
             font-size: 14px;
-            line-height: 22px;
+            line-height: 14px;
             padding-left: 10px;
         }
     }
@@ -2151,7 +2156,7 @@ body{
     .relationtop{
         padding: 15px 20px;
         width: 100%;
-        grid-template-columns: 1fr 120px 120px  1fr 1fr 70px;
+        grid-template-columns: 1fr 120px 120px  1fr 1fr 70px ;
 
         >div{
             padding: 0;
@@ -2165,6 +2170,21 @@ body{
                     text-align: center;
                     padding-left: 15px;
                 }
+            }
+        }
+    }
+    .relationgrid{
+        grid-template-columns:1fr 1fr 1fr 1fr  250px 1fr ;
+    }
+    .relationbody{
+        >div:nth-last-of-type(1){
+            position: relative;
+            color: #f7f7f7;
+            i{
+                position: absolute;
+                font-size: 20px;
+                line-height: 20px;
+                right: 0;
             }
         }
     }

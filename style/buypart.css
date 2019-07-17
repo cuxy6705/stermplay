@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  font-family: "微軟正黑體", "Microsoft JhengHei",arial,sans-serif;
+  font-size: 14px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 525px 1fr;
+      grid-template-columns: 525px 1fr;
+}
+
+.buyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.buyer .topinfomation {
+  height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 6px 20px 0 #f2f2f2;
+          box-shadow: 0 6px 20px 0 #f2f2f2;
+}
+
+.bar {
+  max-width: 90px;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bar .imgbox {
+  padding: 20px;
+  background-color: #000;
+}
+
+.bar .imgbox div {
+  height: 50px;
+  width: 50px;
+  background: url("../../imges/justin.png") no-repeat center;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.bar .menu {
+  background-color: #ffca00;
+  height: 100%;
+}
+
+.bar .menu > div {
+  position: relative;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.bar .menu i {
+  font-size: 30px;
+}
+
+.bar .menu span {
+  display: inline-block;
+  position: absolute;
+  background-color: #ff0000;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 50%;
+}
+
+.button {
+  cursor: pointer;
+  word-break: keep-all;
+  background-color: #dedcdb;
+  padding: 20px;
+  text-align: center;
+}
+
+.button.active {
+  background-color: #ff8f00;
+  color: #ffffff;
+}
+
+.itemcontent {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.album {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.album .swiper-container {
+  margin: 0;
+}
+
+.album .gallery-top {
+  max-width: 270px;
+  width: 100%;
+}
+
+.album .gallery-top .swiper-slide {
+  width: 100%;
+  height: 250px;
+  background-color: #ff8f00;
+}
+
+.album .gallery-top .swiper-slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.album .gallery-thumbs {
+  max-width: 85px;
+  width: 100%;
+  max-height: 250px;
+}
+
+.album .gallery-thumbs .swiper-slide {
+  width: 100%;
+  height: 250px;
+  background-color: #ff8f00;
+}
+
+.album .gallery-thumbs .swiper-slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.context .itemname {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.pricecontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.pricecontent span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pricecontent span i {
+  text-decoration: line-through;
+  font-style: normal;
+}
+
+.pricecontent p {
+  margin: 0;
+  font-size: 18px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.itemintro {
+  color: #707070;
+}
+
+.messagebox {
+  height: 55px;
+  background-color: #e0e2e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.messagebox input {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 50px;
+  padding: 8px 15px;
+}
+
+.messagebox .imgbox {
+  height: 40px;
+  width: 40px;
+  background: url("../../imges/justin.png") no-repeat center;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 12px 0 30px;
+}
+
+.messagebox .typebox {
+  width: 100%;
+  margin: 0 15px;
+}
+/*# sourceMappingURL=buypart.css.map */

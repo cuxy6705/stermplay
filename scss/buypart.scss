@@ -1,0 +1,198 @@
+ *{
+    font-family:"微軟正黑體", "Microsoft JhengHei",arial,sans-serif;
+    font-size: 14px;
+     &::-webkit-scrollbar-track
+        {	border-radius: 10px;
+        	background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar
+        {
+        	width: 12px;
+        	background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            border: 2px solid #f6f6f6;
+        	background-color: #fff;
+        }
+ }
+
+ 
+.container{
+    max-width: 1366px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 525px 1fr;
+    
+}
+.buyer{
+    display: flex;
+    flex-direction: column;
+    .topinfomation{
+        height: 55vh;
+        display: flex;
+        box-shadow: 0 6px 20px 0 #f2f2f2;
+    }
+}
+.bar{
+    max-width: 90px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .imgbox{
+        padding: 20px;
+        background-color: #000;
+        div{
+        height: 50px;
+        width: 50px;
+        background: url('../../imges/justin.png') no-repeat center;
+        border-radius: 50%;
+        background-size: cover;
+        }
+        
+    }
+    .menu{
+        background-color: #ffca00;
+        height: 100%;
+        >div{
+            position: relative;
+            text-align: center;
+            margin: 18px 0 ;
+        }
+        i{
+            font-size: 30px;
+        }
+        span{
+            display:inline-block;
+            position: absolute;
+            background-color: #ff0000;
+            color:#fff;
+            height: 15px;
+            width: 15px;
+            font-size: 12px;
+            line-height: 15px;
+            border-radius: 50%;
+        }
+    }
+}
+.button{
+    cursor: pointer;
+    word-break: keep-all;
+    background-color: #dedcdb;
+    padding: 20px;
+    text-align: center;
+    &.active{
+        background-color: #ff8f00;
+        color: #ffffff;
+    }
+}
+.itemcontent{
+    padding: 20px;
+    overflow-y: auto;
+    
+}
+.album{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    .swiper-container{
+        margin: 0;
+    }
+    .gallery-top{
+        max-width: 270px;
+        width: 100%;
+        .swiper-slide{
+            width: 100%;
+            height: 250px;
+            background-color: #ff8f00;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .gallery-thumbs{
+        max-width: 85px;
+        width: 100%;
+        max-height: 250px;
+        .swiper-slide{
+            width: 100%;
+            height: 250px;
+            background-color: #ff8f00;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.context{
+    .itemname{
+        font-size: 20px;
+        font-weight: bold;
+        margin:  1rem 0 0.5rem 0 ;
+        
+    }
+}
+.pricecontent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-bottom: 20px;
+    span{
+        display: inline-block;
+        margin-right: 5px;
+        i{
+            text-decoration: line-through;
+            font-style: normal;
+        }
+    }
+    p{
+        margin: 0;
+        font-size: 18px;
+        color: #ff0000;
+        font-weight: bold;
+    }
+}
+.itemintro{
+    color: #707070;
+}
+
+
+.messagebox{
+
+    height: 55px;
+    background-color: #e0e2e5;
+    display: flex;
+    align-items: center;
+    input{
+        height: 100%;
+        width: 100%;
+        border: 0;
+        outline: 0;
+         border-radius: 50px;
+        padding: 8px 15px;
+    }
+    .imgbox{
+        height: 40px;
+        width: 40px;
+        background: url('../../imges/justin.png') no-repeat center;
+        border-radius: 50%;
+       
+        background-size: cover;
+        margin: 0 12px 0 30px;
+    }
+    .typebox{
+        width: 100%;
+        margin:0 15px;
+
+    }
+}
