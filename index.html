@@ -331,22 +331,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="productbox swiper-slide  ">
-                                                <div class="imgbox">
-                                                    <span>ON AIR</span>
-                                                </div>
-                                                <div class="contentbox">
-                                                    <p class="contenttitle">小綠花</p>
-                                                    <div>
-                                                        <p>直播價格:</p>
-                                                        <span>$1200</span>
-                                                    </div>
-                                                    <div>
-                                                        <p>販售數量:</p>
-                                                        <span>30/10</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         
                                         
                                             <div class="productbox swiper-slide ">
@@ -805,8 +790,48 @@
 
                         <input type="text" placeholder="關鍵字搜尋">
                     </div>
-                    <div class="mdbody swiper-container swiper-additem">
+                    <div class="mdbody swiper-container swiper-additem ">
                         <div class="mdgrid swiper-wrapper">
+                            <div class="itembox swiper-slide">
+                                <div class="itemimg"></div>
+                                <div class="itemtext">
+                                    <p>小綠花</p>
+                                    <span>價格:$1200</span>
+                                    <span>目前庫存:30</span>
+                                </div>
+                            </div>
+                            <div class="itembox swiper-slide">
+                                <div class="itemimg"></div>
+                                <div class="itemtext">
+                                    <p>小綠花</p>
+                                    <span>價格:$1200</span>
+                                    <span>目前庫存:30</span>
+                                </div>
+                            </div>
+                            <div class="itembox swiper-slide">
+                                <div class="itemimg"></div>
+                                <div class="itemtext">
+                                    <p>小綠花</p>
+                                    <span>價格:$1200</span>
+                                    <span>目前庫存:30</span>
+                                </div>
+                            </div>
+                            <div class="itembox swiper-slide">
+                                <div class="itemimg"></div>
+                                <div class="itemtext">
+                                    <p>小綠花</p>
+                                    <span>價格:$1200</span>
+                                    <span>目前庫存:30</span>
+                                </div>
+                            </div>
+                            <div class="itembox swiper-slide">
+                                <div class="itemimg"></div>
+                                <div class="itemtext">
+                                    <p>小綠花</p>
+                                    <span>價格:$1200</span>
+                                    <span>目前庫存:30</span>
+                                </div>
+                            </div>
                             <div class="itembox swiper-slide">
                                 <div class="itemimg"></div>
                                 <div class="itemtext">
@@ -905,7 +930,11 @@
                             </div>
 
                         </div>
+                        
                     </div>
+                    <div class="t5"></div>
+                    <div class="t6"></div>
+
                     <div class="mainbutton">
                         <div>快速上架</div>
                         <div>確認</div>
@@ -1138,7 +1167,7 @@
 <!-- 下單修改 -->
 <div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered change-model" role="document">
         <div class="modal-content">
             <div class="change">
                 <span class="icon-error-triangle"></span>
@@ -1170,16 +1199,14 @@
     </div>
 </div>
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
     <script>
         $(document).ready(function () {
@@ -1217,13 +1244,22 @@
                 },
             })
 
-            var swiperadd = new Swiper('.swiper-additem',{
+            var swiperadd = new Swiper('.swiper-additem', {
+                initialSlide: 1,
                 slidesPerView: 3,
-                disabledClass: 'my-button-disabled',
-                slidesPerColumn: 2,
-                slidesPerColumnFill: 'row',
+                slidesPerColumn: 3,
+                spaceBetween: 20,
+                slidesPerColumnFill: 'column',
+                navigation: {
+                    nextEl: '.t6',
+                    prevEl: '.t5',
+                },
             });
+            $('#additem').on('shown.bs.modal', function () {
+                swiperadd.update();
+            })
            
+
         });
         $('.buttonarea > span').on('click', function () {
             $(this).removeClass('active').siblings('span').removeClass('active');
@@ -1236,9 +1272,8 @@
 
 
         })
-       
+        
 
-      
 
         var html = $('.gamecontent_1').html();
         $('.gamemodelcontent').html(html);
@@ -1253,10 +1288,7 @@
         });
 
 
-        $(window).resize(function () { 
-            let width = $(window).width() - 870;
-            $('.productcontent').css('width') - '1px';
-        });
+
         $('.menubar').on('click', function () {
             $('.editcontent').toggleClass('active');
             if($('.editcontent').hasClass('active')){
