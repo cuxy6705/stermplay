@@ -36,6 +36,7 @@ select {
   position: relative;
   background: transparent;
   z-index: 1;
+  font-weight: bold;
 }
 
 .drp-calendar.right {
@@ -139,7 +140,7 @@ select {
   -ms-grid-columns: 140px 345px;
       grid-template-columns: 140px 345px;
   background: #ffca00;
-  height: 65px;
+  height: 8.464vh;
 }
 
 .userphoto {
@@ -159,8 +160,8 @@ select {
   background-color: #fff;
   background: url(../../imges/head.jpg) no-repeat center;
   background-size: cover;
-  height: 35px;
-  width: 35px;
+  height: 5vh;
+  width: 5vh;
 }
 
 .editbutton {
@@ -180,10 +181,10 @@ select {
   cursor: pointer;
   border-radius: 50%;
   background-color: #000;
-  height: 30px;
-  width: 30px;
+  height: 5vh;
+  width: 5vh;
   margin: 0 25px;
-  font-size: 30px;
+  font-size: 5vh;
 }
 
 .relative {
@@ -298,7 +299,7 @@ select {
 
 .mainiput {
   position: relative;
-  margin-top: 15px;
+  margin-top: 2vmin;
 }
 
 .mainiput > i {
@@ -314,7 +315,7 @@ select {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #f2f2f2;
-  height: 40px;
+  height: 5.3vmin;
   padding: 20px;
 }
 
@@ -325,7 +326,6 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
   letter-spacing: 0.14px;
   color: #505050;
 }
@@ -333,8 +333,7 @@ select {
 .mainiput .buttonarea {
   position: relative;
   background-color: #f2f2f2;
-  height: 40px;
-  font-size: 14px;
+  height: 5.3vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,7 +356,6 @@ select {
   height: 100%;
   text-align: center;
   color: #bcbcbc;
-  font-size: 12px;
 }
 
 .mainiput .buttonarea span i {
@@ -460,9 +458,14 @@ select {
   margin: 15px 20px 0;
 }
 
+.productedit {
+  width: 30%;
+  overflow: hidden;
+}
+
 .product {
   background-color: #fff;
-  padding: 20px 30px;
+  padding: 3vh;
   border-radius: 20px;
   -webkit-box-shadow: 0 6px 20px 0 #ececec;
           box-shadow: 0 6px 20px 0 #ececec;
@@ -476,24 +479,26 @@ select {
 
 .product h3 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3vw;
   letter-spacing: 0.17px;
   color: #24253d;
+  margin-bottom: 1vw;
 }
 
 .productinfo {
   background-color: #f7f7f7;
   padding: 10px;
   margin-top: 10px;
+  height: 100%;
 }
 
 .productgrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 90px 1fr;
-      grid-template-columns: 90px 1fr;
-  -ms-grid-rows: 30px;
-      grid-template-rows: 30px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 5vh;
+      grid-template-rows: 5vh;
   margin-bottom: 5px;
 }
 
@@ -508,14 +513,11 @@ select {
 
 .productgrid .disable {
   display: none;
-  font-size: 12px;
   color: #505050;
-  width: 120px;
 }
 
 .productgrid p, .productgrid span {
   margin: 0;
-  font-size: 14px;
   letter-spacing: 0.1px;
   color: #505050;
   display: -webkit-box;
@@ -524,6 +526,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.1vw;
 }
 
 .productgrid .pl {
@@ -533,11 +536,10 @@ select {
 .productgrid input {
   padding-left: 5px;
   height: 100%;
-  width: 120px;
+  width: 100%;
   border: 0;
   outline: 0;
   margin: auto;
-  font-size: 14px;
   letter-spacing: 0.1px;
   color: #505050;
 }
@@ -546,13 +548,14 @@ select {
   position: relative;
   -ms-grid-rows: 20px;
       grid-template-rows: 20px;
-  padding-bottom: 10px;
+  margin-top: 1vh;
+  padding-bottom: 2vh;
   border-bottom: 1px solid #d8d8d8;
 }
 
 .productinfotop p {
   color: #24253d;
-  font-size: 16px;
+  font-size: 1.1vw;
 }
 
 .productinfotop i {
@@ -581,12 +584,11 @@ select {
 }
 
 .productbutton span {
-  font-size: 12px;
   text-align: center;
   color: #ffffff;
   background-color: #ff9620;
   border-radius: 10px;
-  height: 30px;
+  height: 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,7 +665,7 @@ select {
 
 .productcontent {
   position: relative;
-  width: auto;
+  width: 65%;
   height: 100%;
   margin-left: 35px;
   margin-right: 10px;
@@ -673,8 +675,6 @@ select {
 }
 
 .productcontent .swiper-slide {
-  max-width: 140px;
-  min-width: 140px;
   width: 100%;
 }
 
@@ -686,7 +686,7 @@ select {
 .productcontent .icon-plus-sign-in-a-black-circle {
   cursor: pointer;
   position: absolute;
-  right: -20px;
+  right: -47px;
   font-size: 18px;
 }
 
@@ -695,7 +695,7 @@ select {
 }
 
 .imgbox {
-  height: 75px;
+  height: 10vh;
   background-color: orange;
 }
 
@@ -724,9 +724,7 @@ select {
 }
 
 .contentbox p, .contentbox span {
-  line-height: 14px;
   margin: 0;
-  font-size: 14px;
   margin-bottom: 5px;
   letter-spacing: 2px;
 }
@@ -738,8 +736,8 @@ select {
 }
 
 .contentbox .contenttitle {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 1.1vw;
+  line-height: 1.1vw;
   margin-bottom: 6px;
   font-weight: 600;
 }
@@ -747,7 +745,7 @@ select {
 .game {
   margin-top: 15px;
   background-color: #fff;
-  padding: 20px 35px;
+  padding: 3vh;
   border-radius: 20px;
   -webkit-box-shadow: 0 6px 20px 0 #ececec;
           box-shadow: 0 6px 20px 0 #ececec;
@@ -755,18 +753,21 @@ select {
 
 .game h3 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3vw;
   letter-spacing: 0.17px;
   color: #24253d;
   margin-bottom: 15px;
 }
 
 .gamebox {
-  max-width: 200px;
   width: 100%;
   background-color: #f7f7f7;
   padding: 10px 15px;
   margin-right: 10px;
+}
+
+.gamebox.gameline {
+  border: 1px solid red;
 }
 
 .gameready {
@@ -802,40 +803,54 @@ select {
 }
 
 .gametitle {
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 
 .gametitle p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px;
   color: #24253d;
   margin: 0;
-  padding-bottom: 5px;
+  padding-bottom: 0.5vh;
   border-bottom: 1px solid #e3e3e3;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
 }
 
 .gamegrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 70px 100px;
-      grid-template-columns: 70px 100px;
-  -ms-grid-rows: 35px;
-      grid-template-rows: 35px;
-  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1vh 0;
+  height: 5vh;
 }
 
 .gamegrid input {
   border: 0;
   outline: 0;
-  font-size: 12px;
-  padding-left: 10px;
+  padding-left: 1vw;
+  width: 65%;
+}
+
+.gamegrid .fakeinput {
+  border: 0;
+  outline: 0;
+  padding-left: 1vw;
+  width: 65%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gamegrid span {
-  font-size: 14px;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,7 +870,8 @@ select {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
+  grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
 }
 
 .emo img {
@@ -873,8 +889,6 @@ select {
       -ms-flex-align: center;
           align-items: center;
   padding: 8px;
-  margin-bottom: 5px;
-  font-size: 12px;
 }
 
 .ready {
@@ -1149,7 +1163,7 @@ select {
   top: 45%;
   z-index: 9;
   position: absolute;
-  right: -30px;
+  right: -45px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -1158,7 +1172,7 @@ select {
 }
 
 .t4 {
-  right: -22px;
+  right: -20px;
 }
 
 .t2, .t3 {
@@ -1321,12 +1335,12 @@ select {
 
 .fbcontent {
   background-color: #fff;
-  padding-top: 5px;
+  padding-top: 1vmin;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 300px 50px;
-      grid-template-rows: 300px 50px;
-  margin-bottom: 5px;
+  -ms-grid-rows: 35vmin 50px;
+      grid-template-rows: 35vmin 50px;
+  margin-bottom: 1vmin;
 }
 
 .fbcontent .fbgrid {
@@ -1338,14 +1352,11 @@ select {
 
 .fbcontent .fbiframe {
   width: 100%;
-  max-height: 300px;
+  max-height: 35vmin;
   height: 100%;
   position: relative;
-}
-
-.fbcontent .fbiframe img {
-  width: 100%;
-  height: 100%;
+  background: url("../../imges/st.png") no-repeat;
+  background-size: cover;
 }
 
 .fbcontent .fbiframe a {
@@ -1364,7 +1375,7 @@ select {
 }
 
 .fbcontent .fborder {
-  max-height: 300px;
+  max-height: 35vmin;
   overflow-y: auto;
 }
 
@@ -1437,7 +1448,7 @@ select {
 .livecentent {
   position: absolute;
   left: 0;
-  height: calc( 100% - 65px);
+  height: calc( 100% - 8.464vh);
   position: relative;
 }
 
@@ -1480,7 +1491,7 @@ select {
 }
 
 .livecentent main {
-  max-height: 200px;
+  max-height: 30vmin;
   overflow-y: auto;
 }
 
@@ -1581,7 +1592,6 @@ select {
   display: none;
   cursor: pointer;
   color: #fff;
-  font-size: 12px;
   padding: 8px;
   width: 100%;
   background-color: #73a3dd;
@@ -2041,6 +2051,7 @@ select {
   background-color: white;
   -webkit-box-shadow: 0 6px 20px 0 #ececec;
           box-shadow: 0 6px 20px 0 #ececec;
+  padding-right: 12px;
 }
 
 .listgrid > div {
@@ -2059,14 +2070,13 @@ select {
 
 .listgrid > div:nth-last-of-type(1) {
   border: 0;
-  text-align: left;
-  padding-left: 20px;
 }
 
 .listbody {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom: 1px solid #ececec;
+  padding-right: 0;
 }
 
 .listbody p {
@@ -2239,6 +2249,27 @@ select {
       grid-template-columns: 50% 1fr;
 }
 
+.allview .f2 > div {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.allview .f2 > div::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.allview .f2 > div::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.allview .f2 > div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+}
+
 .allview .f2 img {
   width: 100%;
   height: 100%;
@@ -2294,7 +2325,7 @@ select {
 
 .f3 .text span {
   color: #6d565c;
-  font-size: 30px;
+  font-size: 3.5vmin;
   line-height: 12px;
 }
 
@@ -2345,7 +2376,6 @@ select {
 }
 
 .fbmarstercontent {
-  max-height: 260px;
   overflow-y: auto;
 }
 
@@ -2456,7 +2486,7 @@ select {
   background-color: #fff;
   padding: 0  20px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.5vh;
   -webkit-box-shadow: none;
           box-shadow: none;
   max-height: 24vh;
@@ -2522,8 +2552,8 @@ select {
   clear: both;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px 1fr  auto auto  auto;
-      grid-template-columns: 350px 1fr  auto auto  auto;
+  -ms-grid-columns: minmax(350px, 530px) auto auto auto auto;
+      grid-template-columns: minmax(350px, 530px) auto auto auto auto;
   background-color: #fff;
   border-radius: 20px;
   padding: 3vh 30px;
@@ -2532,6 +2562,10 @@ select {
           align-items: center;
   -webkit-box-shadow: 0 6px 20px 0 #ececec;
           box-shadow: 0 6px 20px 0 #ececec;
+}
+
+.relationtop .timeinput input {
+  width: auto;
 }
 
 .relationtop > div {
@@ -2573,6 +2607,9 @@ select {
 }
 
 .relationtop > div input {
+  color: #555555;
+  font-size: 1.825vmin;
+  line-height: 32px;
   width: 100%;
 }
 
@@ -2601,10 +2638,11 @@ select {
   font-weight: bold;
 }
 
-.relationtop > div i, .relationtop > div p, .relationtop > div input, .relationtop > div select {
+.relationtop > div i, .relationtop > div p, .relationtop > div select {
   color: #555555;
   font-size: 1.825vmin;
   line-height: 32px;
+  text-align: center;
 }
 
 .relationgrid {
@@ -2704,8 +2742,8 @@ select {
 }
 
 .newlist .relationtop {
-  -ms-grid-columns: 250px auto auto auto 1fr auto;
-      grid-template-columns: 250px auto auto auto 1fr auto;
+  -ms-grid-columns: minmax(250px, 400px) auto auto auto auto auto;
+      grid-template-columns: minmax(250px, 400px) auto auto auto auto auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2725,12 +2763,12 @@ select {
 .special .relationtop {
   padding: 3vh 20px;
   width: 100%;
-  -ms-grid-columns: 1fr 120px 120px  1fr 1fr 70px;
-      grid-template-columns: 1fr 120px 120px  1fr 1fr 70px;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .special .relationtop > div {
-  padding: 0;
+  padding: 0 10px;
 }
 
 .special .relationtop > div:nth-of-type(4) {
@@ -2754,7 +2792,7 @@ select {
 
 .special .relationbody > div:nth-last-of-type(1) {
   position: relative;
-  color: #f7f7f7;
+  color: #989898;
 }
 
 .special .relationbody > div:nth-last-of-type(1) i {

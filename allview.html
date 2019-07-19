@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="f2">
-                            <img src="./imges/st2.png" alt="">
+                            <img src="./imges/st3.jpg" alt="">
                             <div >
                                 <div class="fbmarster">
                                     <div class="fbmarsterimg">
@@ -286,11 +286,12 @@
 
 
     ];
+    
     var chart = new G2.Chart({
         container: 'mountNode',
-        height:250,
-        width:500,
-        
+        height: document.querySelector('#mountNode').clientHeight - 30,
+        forceFit: true,
+        padding: [20, 80, 95, 80]
     });
     chart.source(data);
     chart.scale('value', {
@@ -309,8 +310,12 @@
         stroke: '#f10c48',
         lineWidth: 1.5
     }).color('#fff');
-   
-    chart.render();
+   $(window).resize(function () { 
+    let chheight = document.querySelector('#mountNode').clientHeight - 30;
+    chart.changeHeight(chheight);
+   });
+   chart.tooltip(false)
+chart.render();
 
 
 </script>
