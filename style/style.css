@@ -65,19 +65,27 @@ select {
   border-radius: 50px;
 }
 
+.gamecontent .flower {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gamecontent .flower span {
+  margin-right: 5px;
+}
+
 .gamecontent .typetimestart {
   background-color: #cc7373;
-  right: 191px;
 }
 
 .gamecontent .typetimeend {
   background-color: #323232;
-  right: 98px;
 }
 
 .gamecontent .typetimeclean {
   background-color: #7aacc2;
-  right: 5px;
 }
 
 .container {
@@ -783,7 +791,7 @@ select {
   text-align: center;
   width: 50px;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0px;
   border-radius: 50px;
   background-color: #b31b00;
@@ -1664,6 +1672,8 @@ select {
 .ordermessage .ordername a {
   text-decoration: none;
   margin-right: 2px;
+  color: #416090;
+  font-weight: bold;
 }
 
 .ordermessage .ordertype {
@@ -2716,6 +2726,7 @@ select {
 }
 
 .relationbody > div {
+  cursor: default;
   border: 0;
 }
 

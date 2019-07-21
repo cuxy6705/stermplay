@@ -1,6 +1,4 @@
 $yellow:#ffca00;
-$right:88px;
-$margin:5px;
 $box-shadow:0 6px 20px 0 #ececec;
 
 body{
@@ -57,18 +55,21 @@ select{
 
 
     }
-    
+    .flower{
+        float: right;
+        display: flex;
+        span{
+            margin-right: 5px;
+        }
+    }
     .typetimestart{
         background-color: #cc7373;
-        right: ($right*2)+($margin*3);
     }
     .typetimeend{
         background-color: #323232;
-        right:$right+($margin*2);
     }
     .typetimeclean{
         background-color: #7aacc2;
-        right: $margin;
     }
 }
 
@@ -602,7 +603,7 @@ select{
         text-align: center;
         width: 50px;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
         padding:  0px;
         border-radius: 50px;
         background-color: #b31b00;
@@ -1320,6 +1321,8 @@ select{
         a{
             text-decoration: none;
             margin-right: 2px;
+            color: #416090;
+            font-weight: bold;
         }
     }
     .ordertype{
@@ -2197,6 +2200,7 @@ select{
     padding-right: 0;
     padding-left: 0;
     >div{
+        cursor: default;
         border: 0;
         &:nth-of-type(1){
             display: flex;
