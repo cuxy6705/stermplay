@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ark直播</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css'/>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css' />
     <link rel="stylesheet" href="./dist/font.css">
     <link rel="stylesheet" href="./dist/style/style.min.css">
@@ -136,6 +135,7 @@
                                         <div class="orderbox">
                                             <span class="bigfan"></span>
                                             <div class="ordername"><a href="#">林宇軒</a> +2</div>
+                                            <div class="ordertype faid">買家棄單</div>
                                         </div>
                                     </div>
                                     <div class="ordermessage" data-toggle="modal" data-target="#change">
@@ -287,7 +287,10 @@
         <div class="right">
             <div>
                 <div class="product">
-                    <div>
+                   
+                    <div class="product-box">
+                        <span class="icon-plus-sign-in-a-black-circle" data-toggle="modal" data-target="#additem"></span>
+                        <div class="t1"></div>
                         <div class="productedit">
                             <h3>直播商品資訊</h3>
                             <div class="remind">
@@ -337,8 +340,7 @@
                             </div>
                         </div>
                         <div class="productcontent">
-                            <span class="icon-plus-sign-in-a-black-circle" data-toggle="modal"
-                                data-target="#additem"></span>
+                          
                             <div class="hde">
                                 <div class="swiper-container swiper-product">
                                     <div class="swiper-wrapper">
@@ -569,16 +571,16 @@
 
 
                             <div class="t2"></div>
-                            <div class="t1"></div>
+                          
                         </div>
                     </div>
                 </div>
                 <div class="game">
                     <div class="gamecontent">
                         <div class="flower">
-                            <span class="typetimestart">計時開始</span>
-                            <span class="typetimeend">計時結束</span>
-                            <span class="typetimeclean">清除中獎畫面</span>
+                            <button class="typetimestart">計時開始</button>
+                            <button class="typetimeend">計時結束</button>
+                            <button class="typetimeclean">清除中獎畫面</button>
                         </div>
                         <span class="icon-plus-sign-in-a-black-circle" data-toggle="modal"
                             data-target="#addgame"></span>
@@ -1011,8 +1013,8 @@
                         <select name="gameselect" id="gameselect">
                             <option value="1">抽獎 - 終極密碼</option>
                             <option value="2">抽獎 - 關鍵字TAG好友</option>
-                            <option value="3">投票</option>
                             <option value="4">抽獎 - 公開分享</option>
+                            <option value="3">投票</option>
                         </select>
                         <span></span>
                     </div>
@@ -1037,8 +1039,8 @@
                         <select name="gameselect" id="gameselect">
                             <option value="1">抽獎 - 終極密碼</option>
                             <option value="2">抽獎 - 關鍵字TAG好友</option>
-                            <option value="3">投票</option>
                             <option value="4">抽獎 - 公開分享</option>
+                            <option value="3">投票</option>
                         </select>
                         <span></span>
                     </div>
@@ -1247,29 +1249,20 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
     <script>
         $(document).ready(function () {
-            let hwidth = $('.productcontent').width();
-            var slidewid = 180;
-            let slide = Math.floor(hwidth / slidewid);
-            let hlength = $('.swiper-product .swiper-slide').length;
-
-            let gwidth = $('.gamecontent').width();
-            let gslide = Math.floor(gwidth / 300);
-            let glenth = $('.swiper-game .swiper-slide').length;
-            if (gslide > glenth) {
-                gslide = glenth;
-            }
-
-            if ($(window).width() <= 1440 && $(window).height() <= 900) {
-                slide = 3;
-                gslide = 3;
-            }
-
             var swiperProduct = new Swiper('.swiper-product', {
-                slidesPerView: slide,
+                slidesPerView: 4,
                 disabledClass: 'my-button-disabled',
                 slidesPerColumn: 2,
                 slidesPerColumnFill: 'column',
                 spaceBetween: 10,
+                breakpoints:{
+                    1680:{
+                        slidesPerView: 3,
+                    },
+                    1200:{
+                         slidesPerView: 2,
+                    }
+                },
                 navigation: {
                     nextEl: '.t1',
                     prevEl: '.t2',
@@ -1279,9 +1272,19 @@
 
 
             var swiperGame = new Swiper('.swiper-game', {
-                slidesPerView: gslide,
+                slidesPerView: 4,
                 spaceBetween: 20,
                 disabledClass: 'my-button-disabled',
+                breakpoints: {
+                    1680: {
+                        slidesPerView: 3,
+                         spaceBetween: 10,
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                    }
+                },
+                
                 navigation: {
 
                     nextEl: '.t4',
@@ -1406,6 +1409,79 @@
             $('.gamebox').removeClass('gameline');
             $(this).addClass('gameline');
         })
+    </script>
+    <script>
+        !function (window, document, $, undefined) {
+                var init = function () {
+                    var $win = $(window),
+                        reEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+                    disabledResize();
+                    $win.on(reEvt, isScale);
+                };
+                var isScale = function () {
+                    var ratio = detectZoom();
+                    if (ratio != 100) alert('當前網頁比例100% 可能會影響觀看效果 建議案下ctrl + 0 回復正常');
+                }
+                var detectZoom = function () {
+                    var ratio = 0,
+                        screen = window.screen,
+                        ua = navigator.userAgent.toLowerCase();
+
+                    if (window.devicePixelRatio !== undefined) {
+                        ratio = window.devicePixelRatio;
+                    } else if (~ua.indexOf('msie')) {
+                        if (screen.deviceXDPI && screen.logicalXDPI) {
+                            ratio = screen.deviceXDPI / screen.logicalXDPI;
+                        }
+                    } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+                        ratio = window.outerWidth / window.innerWidth;
+                    };
+
+                    if (ratio) {
+                        ratio = Math.round(ratio * 100);
+                    };
+
+                    return ratio;
+                };
+
+                var disabledResize = function () {
+                    var $body = $('body'),
+                        $win = $(window),
+                        $doc = $(document);
+                    $body.css('zoom', 'reset');
+
+                    $doc.on('keydown', disabledKeyDown);
+                    $win.on('mousewheel DOMMouseScroll', disabledMouseEvent);
+                };
+
+                var disabledKeyDown = function (event) {
+                    if (
+                        (event.ctrlKey || event.metaKey) &&
+                        (event.keyCode === 61 || event.keyCode === 107 || event.keyCode === 173 ||
+                            event.keyCode === 109 || event.keyCode === 187 || event.keyCode === 189)
+                    ) {
+
+                        stopDefault(event);
+                    };
+                }
+
+                var disabledMouseEvent = function (event) {
+                    if (event.ctrlKey || event.metaKey) {
+                        stopDefault(event);
+                    };
+                };
+
+                var stopDefault = function (e) {
+                    if (e && e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        window.event.returnValue = false;
+                        return false;
+                    }
+                }
+
+                $(document).ready(init);
+            }(window, document, jQuery, undefined);
     </script>
 </body>
 

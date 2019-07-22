@@ -43,33 +43,54 @@ select{
     display: flex;
 }
 .gamecontent{
+    button:focus{
+        outline:0;
+    }
     .typetimestart,.typetimeend,.typetimeclean{
-    width: 88px;
+    width: 120px;
     display: inline-block;
-        top: 0px;
+    top: 0px;
     padding: 4px 8px;
-    font-size: 12px;
     text-align: center;
     color: #ffffff;
     border-radius: 50px;
-
-
+    border: 1px solid transparent;
+    font-size: 0.8vw;
+    &:hover{
+        box-shadow: 0 1px 0 0 rgba(0,0,0,0.27);
+        border: 1px solid rgba(0,0,0,0.27);
+        cursor: pointer
+    }
+    
     }
     .flower{
         float: right;
         display: flex;
-        span{
+        margin-right: 20px;
+        button{
             margin-right: 5px;
         }
     }
-    .typetimestart{
+    button.typetimestart{
         background-color: #cc7373;
+        &:active{
+            box-shadow: inset 0 2px 0 rgba(0,0,0,0.27);
+            background-color: #cc7373;
+        }
     }
     .typetimeend{
         background-color: #323232;
+        &:active{
+            box-shadow: inset 0 2px 0 rgba(0,0,0,0.27);
+            background-color: #323232;
+        }
     }
     .typetimeclean{
         background-color: #7aacc2;
+        &:active{
+            box-shadow: inset 0 2px 0 rgba(0,0,0,0.27);
+            background-color: #7aacc2;
+        }
     }
 }
 
@@ -374,7 +395,17 @@ select{
     margin-top: 10px;
     height: 100%;
 }
-
+.product-box{
+    position: relative;
+     >.icon-plus-sign-in-a-black-circle{
+        cursor: pointer;
+        position: absolute;
+        right: -20px;
+        &::before{
+            color: #ff0000;
+        }
+    }
+}
 .productgrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -515,18 +546,14 @@ select{
         margin-right: 0px;
         padding: 2px;
     }
-    .icon-plus-sign-in-a-black-circle{
-        cursor: pointer;
-        position: absolute;
-        right: -47px;
-        font-size: 18px;
-        &::before{
-            color: #ff0000;
-        }
-    }
+    
 }
 .imgbox{
-    height: 10vh;
+    background-image: url('../../imges/flower.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top top;
+    height: 12vh;
     background-color: orange;
     img{
         width: 100%;
@@ -545,14 +572,14 @@ select{
     }
 }
 .contentbox{
-    margin-bottom: 10px;
+    padding: 5px 10px;
     p,span{
         margin: 0;
         margin-bottom: 5px;
         letter-spacing: 2px;
     }
     
-    padding:10px;
+   
     >div{
         display: flex;
 
@@ -580,7 +607,7 @@ select{
         font-size: 1.3vw;
         letter-spacing: 0.17px;
         color: #24253d;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
 }
@@ -590,7 +617,7 @@ select{
     padding: 10px 15px;
     margin-right:  10px;
     &.gameline{
-        border: 1px solid red;
+        border: 2px solid red;
     }
 }
 .gameready{
@@ -692,8 +719,7 @@ select{
         cursor: pointer;
         position: absolute;
         right: -20px;
-        top: 3px;
-        font-size: 18px;
+        top: 6px;
         &::before{
             color: #ff0000;
         }
@@ -790,6 +816,8 @@ select{
   display: grid;
   grid-template-columns: 1fr 1fr;
   .itemimg{
+      background: url('../../imges/st3.jpg') no-repeat center center;
+      background-size: cover;
       background-color: olive;
       img{
           width: 100%;
@@ -802,14 +830,14 @@ select{
         flex-direction: column;
       p{
         
-        font-size: 14px;
+        font-size: 16px;
         margin: 0;
         padding: 0 0 5px 16px;
       }
       span{
         padding: 0 0 2px 16px;
         
-        font-size: 12px;
+        font-size: 14px;
       }
   }
 }
@@ -865,6 +893,7 @@ select{
         background-color: #ececec;
         padding: 8px 20px ;
           color: #24253d;
+        font-size: 16px;
     }
 }
 .gamebutton{
@@ -892,7 +921,7 @@ select{
     top: 45%;
     z-index: 9;
     position: absolute;
-    right: -45px;
+    right: -20px;
     width: 0;
     height: 0;
     border-style: solid;
@@ -949,7 +978,7 @@ select{
     span{
         display: block;
         
-        font-size: 14px;
+        font-size: 16px;
         color: #505050;
         margin-top: 10px;
         margin-bottom: 15px;
@@ -959,11 +988,12 @@ select{
     .option{
         display: grid;
         grid-template-columns: 80px 1fr;
+        grid-column-gap: 10px;
         margin-bottom: 6px;
         p{
             display: flex;
             align-items: center;
-            font-size: 14px;
+            font-size: 16px;
             margin: 0;
             color: #505050;
 
@@ -972,21 +1002,21 @@ select{
             border: 0;
             outline: 0;
             background-color: #ececec;
-            font-size: 12px;
+            font-size: 14px;
             color: #505050;
             padding: 10px;
         }   
     }
      .gametext{
             p{
-                font-size: 14px;
+                font-size: 16px;
                 color: #505050;
                 margin-bottom: 5px;
             }
             textarea{
                 resize: none;
                 background-color: #ececec;
-                font-size: 12px;
+                font-size: 14px;
                 color: #000000;
                 padding: 15px 20px;
                 height: 70px;
@@ -1326,16 +1356,20 @@ select{
         }
     }
     .ordertype{
+        margin-top: 3px;
         margin-left: 5px;
         height: 20px;
         font-size: 12px;
         color: white;
         background-color: #b31b00;
-        padding: 2px 12px;
+        padding: 3px 12px;
         border-radius: 50px;
-        line-height: 18px;
+        line-height: 14px;
         &.succes{
             background-color:#ff9620;
+        }
+        &.faid{
+            background-color: #727272; 
         }
     }
     .bigfan{
@@ -1356,7 +1390,6 @@ select{
 }
 .remind{
     display: none;
-    white-space: nowrap;
     position: relative;
     
   font-size: 12px;
@@ -2474,3 +2507,69 @@ select{
         }
 }
 // ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲登入▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+
+@media all and (-ms-high-contrast:none) {
+    .grid,
+    .topbar,
+    .productgrid,
+    .productbutton,
+    .emo,
+    .specialaddcontent,
+    .relationgrid,
+    .relationtop,
+    .saletop,
+    .itembox,
+    .gamebutton,
+    .option,
+    .emotion,
+    .allviewgrid,
+    .fbcontent,
+    .fbgrid,
+    .buygrid,
+    .listgrid,
+    .effect,
+    .f2
+    {
+        display: flex;
+       
+        justify-content: space-around;
+    }
+
+    .right{
+        flex-basis: 56%;
+    }
+    .left{
+        flex-basis: 44%;
+        .relative{
+            width: 100%;
+        }
+        .userphoto{
+            max-width: 140px;
+            width: 100%;
+        }
+        .editbutton{
+            width: 100%;
+        }
+        .mainiput{
+            div{
+                flex-basis: 40%;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            input{
+                flex-basis: 60%;
+                width: 100%;
+            }
+            .buttonarea{
+                 flex-basis: 60%;
+                width: 100%;
+            }
+            textarea{
+                flex-basis: 60%;
+                width: 100%;
+            }
+        }
+
+    }
+}

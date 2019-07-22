@@ -54,15 +54,27 @@ select {
   display: flex;
 }
 
+.gamecontent button:focus {
+  outline: 0;
+}
+
 .gamecontent .typetimestart, .gamecontent .typetimeend, .gamecontent .typetimeclean {
-  width: 88px;
+  width: 120px;
   display: inline-block;
   top: 0px;
   padding: 4px 8px;
-  font-size: 12px;
   text-align: center;
   color: #ffffff;
   border-radius: 50px;
+  border: 1px solid transparent;
+  font-size: 0.8vw;
+}
+
+.gamecontent .typetimestart:hover, .gamecontent .typetimeend:hover, .gamecontent .typetimeclean:hover {
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.27);
+          box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.27);
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  cursor: pointer;
 }
 
 .gamecontent .flower {
@@ -70,13 +82,20 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 20px;
 }
 
-.gamecontent .flower span {
+.gamecontent .flower button {
   margin-right: 5px;
 }
 
-.gamecontent .typetimestart {
+.gamecontent button.typetimestart {
+  background-color: #cc7373;
+}
+
+.gamecontent button.typetimestart:active {
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
+          box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
   background-color: #cc7373;
 }
 
@@ -84,7 +103,19 @@ select {
   background-color: #323232;
 }
 
+.gamecontent .typetimeend:active {
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
+          box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
+  background-color: #323232;
+}
+
 .gamecontent .typetimeclean {
+  background-color: #7aacc2;
+}
+
+.gamecontent .typetimeclean:active {
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
+          box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.27);
   background-color: #7aacc2;
 }
 
@@ -500,6 +531,20 @@ select {
   height: 100%;
 }
 
+.product-box {
+  position: relative;
+}
+
+.product-box > .icon-plus-sign-in-a-black-circle {
+  cursor: pointer;
+  position: absolute;
+  right: -20px;
+}
+
+.product-box > .icon-plus-sign-in-a-black-circle::before {
+  color: #ff0000;
+}
+
 .productgrid {
   display: -ms-grid;
   display: grid;
@@ -691,19 +736,12 @@ select {
   padding: 2px;
 }
 
-.productcontent .icon-plus-sign-in-a-black-circle {
-  cursor: pointer;
-  position: absolute;
-  right: -47px;
-  font-size: 18px;
-}
-
-.productcontent .icon-plus-sign-in-a-black-circle::before {
-  color: #ff0000;
-}
-
 .imgbox {
-  height: 10vh;
+  background-image: url("../../imges/flower.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top top;
+  height: 12vh;
   background-color: orange;
 }
 
@@ -727,8 +765,7 @@ select {
 }
 
 .contentbox {
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px 10px;
 }
 
 .contentbox p, .contentbox span {
@@ -764,7 +801,7 @@ select {
   font-size: 1.3vw;
   letter-spacing: 0.17px;
   color: #24253d;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .gamebox {
@@ -775,7 +812,7 @@ select {
 }
 
 .gamebox.gameline {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .gameready {
@@ -915,8 +952,7 @@ select {
   cursor: pointer;
   position: absolute;
   right: -20px;
-  top: 3px;
-  font-size: 18px;
+  top: 6px;
 }
 
 .gamecontent > span::before {
@@ -1032,6 +1068,8 @@ select {
 }
 
 .itembox .itemimg {
+  background: url("../../imges/st3.jpg") no-repeat center center;
+  background-size: cover;
   background-color: olive;
 }
 
@@ -1053,14 +1091,14 @@ select {
 }
 
 .itembox .itemtext p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   padding: 0 0 5px 16px;
 }
 
 .itembox .itemtext span {
   padding: 0 0 2px 16px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .strat {
@@ -1132,6 +1170,7 @@ select {
   background-color: #ececec;
   padding: 8px 20px;
   color: #24253d;
+  font-size: 16px;
 }
 
 .gamebutton {
@@ -1171,7 +1210,7 @@ select {
   top: 45%;
   z-index: 9;
   position: absolute;
-  right: -45px;
+  right: -20px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -1230,7 +1269,7 @@ select {
 
 .gamecontentbase span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #505050;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -1243,6 +1282,7 @@ select {
   display: grid;
   -ms-grid-columns: 80px 1fr;
       grid-template-columns: 80px 1fr;
+  grid-column-gap: 10px;
   margin-bottom: 6px;
 }
 
@@ -1253,7 +1293,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   color: #505050;
 }
@@ -1262,13 +1302,13 @@ select {
   border: 0;
   outline: 0;
   background-color: #ececec;
-  font-size: 12px;
+  font-size: 14px;
   color: #505050;
   padding: 10px;
 }
 
 .gamecontentbase .gametext p {
-  font-size: 14px;
+  font-size: 16px;
   color: #505050;
   margin-bottom: 5px;
 }
@@ -1276,7 +1316,7 @@ select {
 .gamecontentbase .gametext textarea {
   resize: none;
   background-color: #ececec;
-  font-size: 12px;
+  font-size: 14px;
   color: #000000;
   padding: 15px 20px;
   height: 70px;
@@ -1677,18 +1717,23 @@ select {
 }
 
 .ordermessage .ordertype {
+  margin-top: 3px;
   margin-left: 5px;
   height: 20px;
   font-size: 12px;
   color: white;
   background-color: #b31b00;
-  padding: 2px 12px;
+  padding: 3px 12px;
   border-radius: 50px;
-  line-height: 18px;
+  line-height: 14px;
 }
 
 .ordermessage .ordertype.succes {
   background-color: #ff9620;
+}
+
+.ordermessage .ordertype.faid {
+  background-color: #727272;
 }
 
 .ordermessage .bigfan {
@@ -1709,7 +1754,6 @@ select {
 
 .remind {
   display: none;
-  white-space: nowrap;
   position: relative;
   font-size: 12px;
   letter-spacing: 0.09px;
@@ -3064,5 +3108,76 @@ select {
   left: -3px;
   top: -3px;
   background-color: #000;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .grid,
+  .topbar,
+  .productgrid,
+  .productbutton,
+  .emo,
+  .specialaddcontent,
+  .relationgrid,
+  .relationtop,
+  .saletop,
+  .itembox,
+  .gamebutton,
+  .option,
+  .emotion,
+  .allviewgrid,
+  .fbcontent,
+  .fbgrid,
+  .buygrid,
+  .listgrid,
+  .effect,
+  .f2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .right {
+    -ms-flex-preferred-size: 56%;
+        flex-basis: 56%;
+  }
+  .left {
+    -ms-flex-preferred-size: 44%;
+        flex-basis: 44%;
+  }
+  .left .relative {
+    width: 100%;
+  }
+  .left .userphoto {
+    max-width: 140px;
+    width: 100%;
+  }
+  .left .editbutton {
+    width: 100%;
+  }
+  .left .mainiput div {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .left .mainiput input {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    width: 100%;
+  }
+  .left .mainiput .buttonarea {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    width: 100%;
+  }
+  .left .mainiput textarea {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
