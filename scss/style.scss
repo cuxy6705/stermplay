@@ -2520,15 +2520,16 @@ select{
     .saletop,
     .itembox,
     .gamebutton,
-    .option,
-    .emotion,
+    .gamecontentbase .option,
+    .gamecontentbase .emotion,
+    .allview,
     .allviewgrid,
     .fbcontent,
     .fbgrid,
     .buygrid,
     .listgrid,
-    .effect,
-    .f2
+    .allview .f1 .effect,
+    .allview .f2
     {
         display: flex;
        
@@ -2536,12 +2537,12 @@ select{
     }
 
     .right{
-        flex-basis: 56%;
+        flex-basis: 65%;
     }
     .left{
-        flex-basis: 44%;
+        flex-basis: 12%;
         .relative{
-            width: 100%;
+            width: 500px;
         }
         .userphoto{
             max-width: 140px;
@@ -2554,8 +2555,7 @@ select{
             div{
                 flex-basis: 40%;
                 width: 100%;
-                text-align: center;
-                justify-content: center;
+
             }
             input{
                 flex-basis: 60%;
@@ -2570,6 +2570,95 @@ select{
                 width: 100%;
             }
         }
+        .maintextarea{
+            div{
+                text-align: left;
+            }
+        }
+        &.index{
+            flex-basis: 35%;
+            .relative{
+            width: 100%;
+            }
+        }
+    }
 
+    .productgrid {
+        p:nth-of-type(1){
+            flex-basis: 50%;
+            width: 100%;
+            text-align: left;
+        }
+        input{
+            flex-basis: 50%;
+        }
+        .number{
+            flex-basis: 50%;
+            width: 100%;
+            z-index: 1;
+            input{
+                width: 100%;
+                flex-basis: 100%;
+            }
+            span{
+                top:0;
+            }
+            .path2{
+                top: 8px;
+            }
+            .icon-mines{
+                right: 8px;
+            }
+        }
+    }
+    .productbutton{
+        span{
+            flex-basis: 48%;
+            width: 100%;
+        }
+    }
+    .emo{
+        flex-wrap: wrap;
+        div{
+            flex-basis: 40%;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .option{
+        p{
+            flex-basis: 30%;
+            width:100%;
+            justify-content: flex-start;
+        }
+        input{
+            flex-basis: 65%;
+            width:100%;
+        }
+    }
+    .emotion{
+        flex-wrap: wrap;
+        flex-basis: 40%;
+    }
+    .allview{
+        flex-wrap: wrap;
+
+        .f1,.f3{
+            flex-basis: 40%;
+            margin-bottom: 15px;
+        }
+        .f2,.f4{
+            flex-basis: 50%;
+            margin-bottom: 15px;
+        }
+        .f2{
+            max-height: 400px;
+            img{
+                flex-basis: 50%;
+            }
+        }
+    }
+    .effect{
+        flex-wrap: wrap;
     }
 }

@@ -3122,15 +3122,16 @@ select {
   .saletop,
   .itembox,
   .gamebutton,
-  .option,
-  .emotion,
+  .gamecontentbase .option,
+  .gamecontentbase .emotion,
+  .allview,
   .allviewgrid,
   .fbcontent,
   .fbgrid,
   .buygrid,
   .listgrid,
-  .effect,
-  .f2 {
+  .allview .f1 .effect,
+  .allview .f2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3138,15 +3139,15 @@ select {
         justify-content: space-around;
   }
   .right {
-    -ms-flex-preferred-size: 56%;
-        flex-basis: 56%;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
   }
   .left {
-    -ms-flex-preferred-size: 44%;
-        flex-basis: 44%;
+    -ms-flex-preferred-size: 12%;
+        flex-basis: 12%;
   }
   .left .relative {
-    width: 100%;
+    width: 500px;
   }
   .left .userphoto {
     max-width: 140px;
@@ -3159,10 +3160,6 @@ select {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     width: 100%;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .left .mainiput input {
     -ms-flex-preferred-size: 60%;
@@ -3178,6 +3175,105 @@ select {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
     width: 100%;
+  }
+  .left .maintextarea div {
+    text-align: left;
+  }
+  .left.index {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
+  .left.index .relative {
+    width: 100%;
+  }
+  .productgrid p:nth-of-type(1) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    width: 100%;
+    text-align: left;
+  }
+  .productgrid input {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .productgrid .number {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    width: 100%;
+    z-index: 1;
+  }
+  .productgrid .number input {
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .productgrid .number span {
+    top: 0;
+  }
+  .productgrid .number .path2 {
+    top: 8px;
+  }
+  .productgrid .number .icon-mines {
+    right: 8px;
+  }
+  .productbutton span {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    width: 100%;
+  }
+  .emo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .emo div {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .option p {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .option input {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+    width: 100%;
+  }
+  .emotion {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .allview {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .allview .f1, .allview .f3 {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-bottom: 15px;
+  }
+  .allview .f2, .allview .f4 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 15px;
+  }
+  .allview .f2 {
+    max-height: 400px;
+  }
+  .allview .f2 img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .effect {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=style.css.map */
