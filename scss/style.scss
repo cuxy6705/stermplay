@@ -2525,7 +2525,7 @@ select{
     .allview,
     .allviewgrid,
     .fbcontent,
-    .fbgrid,
+    .fbcontent .fbgrid,
     .buygrid,
     .listgrid,
     .allview .f1 .effect,
@@ -2562,7 +2562,7 @@ select{
                 width: 100%;
             }
             .buttonarea{
-                 flex-basis: 60%;
+                 flex-basis: 68%;
                 width: 100%;
             }
             textarea{
@@ -2573,6 +2573,10 @@ select{
         .maintextarea{
             div{
                 text-align: left;
+                align-items: flex-start;
+            }
+            span{
+                width: 100%;
             }
         }
         &.index{
@@ -2639,6 +2643,9 @@ select{
     .emotion{
         flex-wrap: wrap;
         flex-basis: 40%;
+        >div{
+            margin-bottom: 10px;
+        }
     }
     .allview{
         flex-wrap: wrap;
@@ -2660,5 +2667,48 @@ select{
     }
     .effect{
         flex-wrap: wrap;
+    }
+    .gamebutton{
+        div{
+            flex-basis: 45%;
+            width: 100%;
+            padding: 5px 0;
+        }
+    }
+    .specialaddcontent{
+        justify-content: space-between;
+    }
+    .addnewlist{
+        flex-basis: 20%;
+        width: 100%;
+    }
+    .relationtop{
+        flex-basis: 75%;
+        width: 100%;
+        >div input{
+            line-height: 20px;
+        }
+        .icon-calendar-with-a-clock-time-tools{
+            line-height: 0;
+        }
+    }
+    .gamegrid span{
+        width: 35%;
+    }
+    .pl{
+        flex-basis: 50%;
+    }
+    .fbcontent{
+        flex-direction: column;
+        .fbiframe{
+            flex-basis: 40%;
+        }
+        .fborder{
+            flex-basis: 60%;
+        }
+    }
+    .startbody .disable{
+        flex-basis: 50%;
+        width: 100%;
     }
 }
