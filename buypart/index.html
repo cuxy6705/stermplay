@@ -72,9 +72,62 @@
                     </div>
                 </div>
                 <div class="buyermessage">
-                    <div></div>
+                    <div class="fbcontent">
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">吳志明</a>
+                                <p>100+1</p>
+                            </div>
+                        </div>  
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">陳冠宇</a>
+                                <p>小綠花有藍色嗎?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">燦其昌</a>
+                                <p>沒錢可以刷卡嗎</p>
+                            </div>
+                        </div>
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">丁世傑</a>
+                                <p>安安主播你好</p>
+                            </div>
+                        </div>
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">麟尚潔</a>
+                                <p>什麼時候拍別的商品</p>
+                            </div>
+                        </div>
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">林俊義</a>
+                                <p>100+1</p>
+                            </div>
+                        </div>
+                        <div class="personbox">
+                            <div class="imgbox"></div>
+                            <div class="fbtextbox">
+                                <a href="#">林俊義</a>
+                                <p>100+1</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="messagebox">
-                        <div class="imgbox"></div>
+                        <div class="imgbox">
+                            <div></div>
+                        </div>
                         <div class="typebox">
                             <input type="text" placeholder="留言....">
                         </div>
@@ -82,7 +135,17 @@
                 </div>
             </div>
             <div class="seller">
-                
+                <div class="video">
+                    <div  class="timecoount">
+                        <span>00:20:23</span>
+                        <p>時尚花-粉</p>
+                    </div>
+                    <div class="livealarm" >
+                        <span>LIVE</span>
+                        <p>主播準備送好禮，親朋好友一起來.... </p>
+                        <span class="fas fa-eye">103</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -90,6 +153,7 @@
 <script>
 
     var galleryThumbs = new Swiper('.gallery-thumbs', {
+      
         spaceBetween: 10,
         slidesPerView: 3,
          direction: 'vertical',
@@ -97,6 +161,7 @@
 
     });
     var galleryTop = new Swiper('.gallery-top', {
+          effect: 'cube',
         spaceBetween: 10,
         thumbs: {
             swiper: galleryThumbs,
