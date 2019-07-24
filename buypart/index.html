@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css' />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-10/css/all.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-10/css/all.css' />
     <link rel="stylesheet" href="../style/buypart.css">
 
     <title>買家平台</title>
 </head>
+
 <body>
     <div class="div1">
         <div class="container">
@@ -19,7 +21,7 @@
                     <div class="bar">
                         <div class="imgbox">
                             <div>
-                               
+
                             </div>
                         </div>
                         <div class="menu">
@@ -31,44 +33,11 @@
                                 <span>0</span>
                             </div>
                         </div>
-                        <div class="button active">當前 商品</div>
-                        <div class="button">先前 商品</div>
+                        <div data-id=1 class="button active">當前 商品</div>
+                        <div data-id=2 class="button">先前 商品</div>
                     </div>
                     <div class="itemcontent">
-                        <div class="album">
-                            <div class="swiper-container gallery-top">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="../imges/1073-300x300.jpg" ></div>
-                                    <div class="swiper-slide"><img src="../imges/12-300x300.jpg" ></div>
-                                    <div class="swiper-slide"><img src="../imges/282-300x300.jpg"></div>
-                                    <div class="swiper-slide"><img src="../imges/737-300x300.jpg"></div>
-                                </div>
-                            </div>
-                            <div class="swiper-container gallery-thumbs">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="../imges/1073-300x300.jpg"></div>
-                                    <div class="swiper-slide"><img src="../imges/12-300x300.jpg"></div>
-                                    <div class="swiper-slide"><img src="../imges/282-300x300.jpg"></div>
-                                    <div class="swiper-slide"><img src="../imges/737-300x300.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="context">
-                            <p class="itemname">小綠花</p>
-                            <div>
-                                <span>規格 :</span>
-                                <span>粉色</span>
-                            </div>
-                            <div>
-                                <span>數量 :</span>
-                                <span>28</span>
-                            </div>
-                        </div>
-                        <div class="pricecontent">
-                            <span>價格:  <i>$700</i> </span>
-                            <p>直播價格 : $650</p>
-                        </div>
-                        <p class="itemintro">粉玫品種眾多，將依當日較佳粉玫品種出貨，恕不提供挑色，以實際出貨為主。</p>
+
                     </div>
                 </div>
                 <div class="buyermessage">
@@ -79,7 +48,7 @@
                                 <a href="#">吳志明</a>
                                 <p>100+1</p>
                             </div>
-                        </div>  
+                        </div>
                         <div class="personbox">
                             <div class="imgbox"></div>
                             <div class="fbtextbox">
@@ -136,11 +105,11 @@
             </div>
             <div class="seller">
                 <div class="video">
-                    <div  class="timecoount">
+                    <div class="timecoount">
                         <span>00:20:23</span>
                         <p>時尚花-粉</p>
                     </div>
-                    <div class="livealarm" >
+                    <div class="livealarm">
                         <span>LIVE</span>
                         <p>主播準備送好禮，親朋好友一起來.... </p>
                         <span class="fas fa-eye">103</span>
@@ -149,26 +118,111 @@
             </div>
         </div>
     </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
-<script>
-
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      
-        spaceBetween: 10,
-        slidesPerView: 3,
-         direction: 'vertical',
-        watchSlidesVisibility: true,
-
-    });
-    var galleryTop = new Swiper('.gallery-top', {
-          effect: 'cube',
-        spaceBetween: 10,
-        thumbs: {
-            swiper: galleryThumbs,
-        },
-    });
 
 
-</script>
+
+    <!-- 當前商品 -->
+    <div class="itemcontent_1">
+        <div class="album">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../imges/1073-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/12-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/282-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/737-300x300.jpg"></div>
+                </div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../imges/1073-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/12-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/282-300x300.jpg"></div>
+                    <div class="swiper-slide"><img src="../imges/737-300x300.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 先前商品 -->
+    <div class="itemcontent_2">
+        <div class="previously">
+            <span>欲購買此處商品，請留言:商品名+1</span>
+            <div class="previouslybox">
+                <div class="imgbox">
+                    <a href="#">
+                        <img src="../imges/12-300x300.jpg" alt="">
+                        <p>more</p>
+                    </a>
+                </div>
+                <div class="textbox">
+                    <p>小綠花</p>
+                    <p>規格:RGB色</p>
+                    <p>數量:27</p>
+                    <p>價格:$1998</p>
+                    <p>目前價格 : $998</p>
+                </div>
+            </div>
+            <div class="previouslybox">
+                <div class="imgbox">
+                    <a href="#">
+                        <img src="../imges/12-300x300.jpg" alt="">
+                        <p>more</p>
+                    </a>
+                </div>
+                <div class="textbox">
+                    <p>小綠花</p>
+                    <p>規格:RGB色</p>
+                    <p>數量:27</p>
+                    <p>價格:$1998</p>
+                    <p>目前價格 : $998</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-id="1"]').on('click', function () {
+                let html = $('.itemcontent_1').html();
+                $('.itemcontent').html(html);
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    direction: 'vertical',
+                    watchSlidesVisibility: true,
+
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    effect: 'cube',
+                    spaceBetween: 10,
+                    thumbs: {
+                        swiper: galleryThumbs,
+                    },
+                });
+            })
+            $('[data-id="2"]').on('click', function () {
+                let html = $('.itemcontent_2').html();
+                $('.itemcontent').html(html);
+            })
+
+        });
+
+
+
+    </script>
 </body>
+
 </html>
