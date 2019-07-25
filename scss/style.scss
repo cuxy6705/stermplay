@@ -439,6 +439,12 @@ select{
         margin: auto;
         letter-spacing: 0.1px;
         color: #505050;
+        -moz-appearance:textfield;
+        &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin:0;
+        }
+        
     }
 }
 .productinfotop{
@@ -523,6 +529,11 @@ select{
     }
     input{
         text-align: center;
+        -moz-appearance:textfield;
+        &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin:0;
+        }
     }
 }
 .hde{
@@ -533,8 +544,18 @@ select{
     border-radius: 30px;
 }
 .productcontent{
+    .swiper-wrapper { 
+        min-height: 100%;
+    }
+
+    .swiper-slide-active{
+        margin-top: 10px;
+    }
+    
     .swiper-slide{
         width: 100%;
+        max-width: 200px;
+        height: auto!important;
     }
     position: relative;
     width: 65%;
@@ -595,7 +616,7 @@ select{
 
 
 .game{
-    
+    height: 40vh;
 
     margin-top: 15px;
     background-color: #fff;
@@ -715,6 +736,18 @@ select{
 }
 .gamecontent{
     position: relative;
+    .swiper-wrapper { 
+        min-height: 100%;
+    }
+    .swiper-container{
+        width: 100%;
+    }
+    
+    .swiper-slide{
+        width: 100%;
+        max-width: 300px;
+        height: auto!important;
+    }
     >span{
         cursor: pointer;
         position: absolute;
@@ -815,6 +848,9 @@ select{
   background-color: #ffffff;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  &.active{
+      outline: 1px solid red;
+  }
   .itemimg{
       background: url('../../imges/st3.jpg') no-repeat center center;
       background-size: cover;
@@ -1005,7 +1041,34 @@ select{
             font-size: 14px;
             color: #505050;
             padding: 10px;
-        }   
+        }
+        .optiontimecount{
+        display: flex;
+        align-items: center;
+        background-color: #ececec;
+        line-height: 12px;
+        span{
+            display: flex;
+            padding: 0;
+            border: 0;
+            margin: auto 0;
+        }
+        input{
+            padding-left: 0;
+             margin:0 0 0 2px;
+             -moz-appearance:textfield;
+            &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+           
+        }
+        }
+        input.right{
+            width: 25px;
+            text-align: right;
+            padding-right: 0;
+            margin: 0 2px 0 0 ;
+        }
+    } 
     }
      .gametext{
             p{
@@ -1054,6 +1117,7 @@ select{
 
 .gamecontent_1,.gamecontent_2,.gamecontent_3,.gamecontent_4{
     display: none;
+    
 }
 
 .mr{
@@ -1418,6 +1482,15 @@ select{
 .change-model{
     max-width: 376px;
 }
+ div.enable{
+    background-color: #fff;
+    padding-left: 5px;
+    input.right{
+        width: 35px;
+        background-color: #fff;
+        text-align: right;
+    }
+}
 .change{
     >span{
         text-align: center;
@@ -1519,6 +1592,8 @@ select{
             font-size: 15px;
         }
     }
+
+   
 }
 // 開始直播
 .startbody{

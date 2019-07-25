@@ -20,6 +20,14 @@
   background-color: #fff;
 }
 
+.icon-warning {
+  font-family: 'icomoon' !important;
+}
+
+.icon-warning .path1, .icon-warning .path2 {
+  font-family: 'icomoon' !important;
+}
+
 p {
   margin: 0;
 }
@@ -140,35 +148,35 @@ p {
   margin: 0;
 }
 
-.album .gallery-top {
+.album .gallery-top, .album .gallery-top-2 {
   max-width: 270px;
   width: 100%;
 }
 
-.album .gallery-top .swiper-slide {
+.album .gallery-top .swiper-slide, .album .gallery-top-2 .swiper-slide {
   width: 100%;
   height: 250px;
   background-color: #ff8f00;
 }
 
-.album .gallery-top .swiper-slide img {
+.album .gallery-top .swiper-slide img, .album .gallery-top-2 .swiper-slide img {
   height: 100%;
   width: 100%;
 }
 
-.album .gallery-thumbs {
+.album .gallery-thumbs, .album .gallery-thumbs-2 {
   max-width: 85px;
   width: 100%;
   max-height: 250px;
 }
 
-.album .gallery-thumbs .swiper-slide {
+.album .gallery-thumbs .swiper-slide, .album .gallery-thumbs-2 .swiper-slide {
   width: 100%;
   height: 250px;
   background-color: #ff8f00;
 }
 
-.album .gallery-thumbs .swiper-slide img {
+.album .gallery-thumbs .swiper-slide img, .album .gallery-thumbs-2 .swiper-slide img {
   height: 100%;
   width: 100%;
 }
@@ -502,7 +510,38 @@ p {
   margin-bottom: 0;
 }
 
-.itemcontent_1, .itemcontent_2 {
-  display: none;
+.topinfo {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topinfo a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  background-color: #ff8f00;
+  padding: 4px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+}
+
+.topinfo span {
+  color: #747474;
+  font-size: 14px;
 }
 /*# sourceMappingURL=buypart.css.map */

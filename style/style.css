@@ -595,6 +595,12 @@ select {
   margin: auto;
   letter-spacing: 0.1px;
   color: #505050;
+  -moz-appearance: textfield;
+}
+
+.productgrid input::-webkit-outer-spin-button, .productgrid input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .productinfotop {
@@ -705,6 +711,12 @@ select {
 
 .number input {
   text-align: center;
+  -moz-appearance: textfield;
+}
+
+.number input::-webkit-outer-spin-button, .number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .hde {
@@ -727,8 +739,18 @@ select {
   display: flex;
 }
 
+.productcontent .swiper-wrapper {
+  min-height: 100%;
+}
+
+.productcontent .swiper-slide-active {
+  margin-top: 10px;
+}
+
 .productcontent .swiper-slide {
   width: 100%;
+  max-width: 200px;
+  height: auto !important;
 }
 
 .productcontent .swiper-product {
@@ -788,6 +810,7 @@ select {
 }
 
 .game {
+  height: 40vh;
   margin-top: 15px;
   background-color: #fff;
   padding: 3vh;
@@ -948,6 +971,20 @@ select {
   position: relative;
 }
 
+.gamecontent .swiper-wrapper {
+  min-height: 100%;
+}
+
+.gamecontent .swiper-container {
+  width: 100%;
+}
+
+.gamecontent .swiper-slide {
+  width: 100%;
+  max-width: 300px;
+  height: auto !important;
+}
+
 .gamecontent > span {
   cursor: pointer;
   position: absolute;
@@ -1065,6 +1102,10 @@ select {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+}
+
+.itembox.active {
+  outline: 1px solid red;
 }
 
 .itembox .itemimg {
@@ -1305,6 +1346,43 @@ select {
   font-size: 14px;
   color: #505050;
   padding: 10px;
+}
+
+.gamecontentbase .option .optiontimecount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ececec;
+  line-height: 12px;
+}
+
+.gamecontentbase .option .optiontimecount span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border: 0;
+  margin: auto 0;
+}
+
+.gamecontentbase .option .optiontimecount input {
+  padding-left: 0;
+  margin: 0 0 0 2px;
+  -moz-appearance: textfield;
+}
+
+.gamecontentbase .option .optiontimecount input::-webkit-outer-spin-button, .gamecontentbase .option .optiontimecount input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.gamecontentbase .option .optiontimecount input.right {
+  width: 25px;
+  text-align: right;
+  padding-right: 0;
+  margin: 0 2px 0 0;
 }
 
 .gamecontentbase .gametext p {
@@ -1781,6 +1859,17 @@ select {
 
 .change-model {
   max-width: 376px;
+}
+
+div.enable {
+  background-color: #fff;
+  padding-left: 5px;
+}
+
+div.enable input.right {
+  width: 35px;
+  background-color: #fff;
+  text-align: right;
 }
 
 .change > span {
