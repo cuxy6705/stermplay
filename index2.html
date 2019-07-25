@@ -327,20 +327,22 @@
                                     </div>
                                     <div class="productgrid">
                                         <p>計時器</p>
-                                        
+
                                         <div class="enable">
-                                            <input class="enable right" max="59" type="number" value="00" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" >
+                                            <input class="enable right" max="59" type="number" value="00"
+                                                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                                             :
-                                            <input class="enable" type="number" max="59" value="00" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" >
+                                            <input class="enable" type="number" max="59" value="00"
+                                                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                                         </div>
-                                        
+
                                         <div class="disable">00:00:00</div>
-                                        
+
                                     </div>
 
                                     <div class="productbutton">
-                                        <span class="append-slide" >儲存</span>
-                                        <span class="remove-slide" >刪除</span>
+                                        <span class="append-slide">儲存</span>
+                                        <span class="remove-slide">刪除</span>
                                         <div class="timeopen">開放購買</div>
                                         <div class="timeend">計時結束</div>
                                     </div>
@@ -353,7 +355,7 @@
                                 <div class="swiper-container swiper-product">
                                     <div class="swiper-wrapper">
 
-                                    
+
 
 
 
@@ -383,103 +385,6 @@
                         <div class="flex gamecontent">
                             <div class="swiper-container swiper-game">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide gamebox">
-                                        <div class="gameready">
-                                            <span>等待中</span>
-                                            <div>
-                                                <i data-toggle="modal" data-target="#editgame" class="icon-pencil"></i>
-                                                <i  class="icon-cancel-button remove-game-slide"></i>
-                                            </div>
-                                        </div>
-                                        <div class="gametitle">
-                                            <p>抽獎 - 終極密碼</p>
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>獎品名稱</span>
-                                            <div class="fakeinput">兔子娃娃</div>
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>獎品名額</span>
-                                            <div class="fakeinput">3</div>
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>計時器</span>
-                                            <div class="fakeinput">00:00:00</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="swiper-slide  gamebox">
-                                        <div class="gameready">
-                                            <span class="live">LIVE</span>
-                                            <div>
-                                                <i data-toggle="modal" data-target="#editgame" class="icon-pencil"></i>
-                                                <i class="icon-cancel-button remove-game-slide"></i>
-                                            </div>
-                                        </div>
-                                        <div class="gametitle">
-                                            <p>投票-大家希望情人節收到什麼</p>
-                                        </div>
-                                        <div class="emo">
-                                            <div>
-                                                <img src="./封存/like.svg" alt="">
-                                                玫瑰
-                                            </div>
-                                            <div>
-                                                <img src="./封存/love.svg" alt="">
-                                                百合
-                                            </div>
-                                            <div>
-                                                <img src="./封存/haha.svg" alt="">
-                                                房子
-                                            </div>
-                                            <div>
-                                                <img src="./封存/wow.svg" alt="">
-                                                奶嘴
-                                            </div>
-                                            <div>
-                                                <img src="./封存/sad.svg" alt="">
-                                                飛機
-                                            </div>
-                                            <div>
-                                                <img src="./封存/angry.svg" alt="">
-                                                車車
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide  gamebox">
-                                        <div class="gameready">
-                                            <span class="end">已結束</span>
-                                            <div>
-                                                <i data-toggle="modal" data-target="#editgame" class="icon-pencil"></i>
-                                                <i class="icon-cancel-button remove-game-slide"></i>
-                                            </div>
-                                        </div>
-                                        <div class="gametitle">
-                                            <p>抽獎 - 關鍵字TAG好友</p>
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>獎品名稱</span>
-                                            <div class="fakeinput">兔子娃娃</div>
-
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>獎品名額</span>
-                                            <div class="fakeinput">1</div>
-                                        </div>
-                                        <div class="gamegrid">
-                                            <span>計時器</span>
-                                            <div class="fakeinput">00:12:00</div>
-                                        </div>
-
-                                    </div>
-
-
-
-                                    
-
-                                    
-
-                                    
                                 </div>
                             </div>
                             <div class="t4"></div>
@@ -718,7 +623,7 @@
                     <div class="gamemodelcontent"></div>
                     <div class="gamebutton">
                         <div data-dismiss="modal">取消</div>
-                        <div data-dismiss="modal"class="app-slide">確認</div>
+                        <div data-dismiss="modal" class="app-slide">確認</div>
                     </div>
                 </div>
             </div>
@@ -972,6 +877,7 @@
         let index = 0;
         let gameindex = 0;
         $(document).ready(function () {
+
             var swiperProduct = new Swiper('.swiper-product', {
                 slidesPerView: 'auto',
                 disabledClass: 'my-button-disabled',
@@ -981,27 +887,31 @@
                 on: {
                     click: function () {
                         index = this.clickedIndex
-                        
-                        
-                }},
+
+                    }
+                },
                 navigation: {
                     nextEl: '.t1',
                     prevEl: '.t2',
                 },
             })
-            
+
             var swiperGame = new Swiper('.swiper-game', {
                 slidesPerView: 'auto',
                 spaceBetween: 20,
                 disabledClass: 'my-button-disabled',
+                on: {
+                    click: function () {
+                        gameindex = this.clickedIndex;
+                        console.log(gameindex);
+                    }
+                },
                 navigation: {
 
                     nextEl: '.t4',
                     prevEl: '.t3',
                 },
             })
-            
-
 
             document.querySelector('.append-slide').addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1009,39 +919,44 @@
                 swiperProduct.update();
                 timeclick();
             });
-            document.querySelector('.remove-slide').addEventListener('click',function(e){
+            document.querySelector('.remove-slide').addEventListener('click', function (e) {
                 console.log(index);
                 swiperProduct.removeSlide(index);
             });
 
-            swiperGame.on('click', function(e){
-                e.preventDefault();
-               
-                gameindex = this.clickedIndex;
-                console.log(gameindex);
-               
-              
-            })
-            document.getElementsByClassName('remove-game-slide').addEventListener('click', function (e) {
-                console.log(gameindex);
-                console.log(swiperGame.activeIndex);
-            });
-            // console.log(re);
-            //  document.querySelector('.remove-game-slide').addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     console.log(gameindex);
-            //     swiperGame.removeSlide(gameindex);
-            // });
-            
-         
+            function gameRemoveSlide() {
+                $('.icon-cancel-button').on('click', function () {
+                    if ($(this).closest('gameline')) {
+                        console.log(gameindex);
+                        test(gameindex);
+
+                    }
+                })
+            } gameRemoveSlide();
+            function test(id) {
+                swiperGame.removeSlide(id);
+            }
+
             document.querySelector('.app-slide').addEventListener('click', function (e) {
-            
-            swiperGame.addSlide(1,'<div class="swiper-slide gamebox swiper-slide-active"><div class="gameready"><span>等待中</span><div><i data-toggle="modal" data-target="#editgame" class="icon-pencil"></i><i class="icon-cancel-button remove-game-slide"></i></div></div><div class="gametitle"><p>抽獎 - 終極密碼</p></div><div class="gamegrid"><span>獎品名稱</span><div class="fakeinput">兔子娃娃</div></div><div class="gamegrid"><span>獎品名額</span><div class="fakeinput">3</div></div><div class="gamegrid"><span>計時器</span><div class="fakeinput">00:00:00</div></div></div>');
-            swiperGame.update();
-             timeclick();
-            
+
+                let select = $('#gameselect').val();
+                if (select === "1") {
+                    console.log('1');
+                    swiperGame.addSlide(1, '<div class="swiper-slide gamebox swiper-slide-active"><div class="gameready"><span>等待中</span><div><i data-toggle="modal" data-target="#editgame" class="icon-pencil"></i><i class="icon-cancel-button remove-game-slide"></i></div></div><div class="gametitle"><p>抽獎 - 終極密碼</p></div><div class="gamegrid"><span>獎品名稱</span><div class="fakeinput">兔子娃娃</div></div><div class="gamegrid"><span>獎品名額</span><div class="fakeinput">3</div></div><div class="gamegrid"><span>計時器</span><div class="fakeinput">00:00:00</div></div></div>');
+                } else if (select === "2") {
+                    console.log('2');
+                    swiperGame.addSlide(1, '<div class="swiper-slide  gamebox"><div class="gameready"><span class="end">已結束</span><div><i data-toggle="modal"data-target="#editgame"class="icon-pencil"></i><i class="icon-cancel-button remove-game-slide"></i></div></div><div class="gametitle"><p>抽獎-關鍵字TAG好友</p></div><div class="gamegrid"><span>獎品名稱</span><div class="fakeinput">兔子娃娃</div></div><div class="gamegrid"><span>獎品名額</span><div class="fakeinput">1</div></div><div class="gamegrid"><span>計時器</span><div class="fakeinput">00:12:00</div></div></div>');
+                } else if (select === "3") {
+                    console.log('3');
+                    swiperGame.addSlide(1, '<div class="swiper-slide  gamebox"><div class="gameready"><span class="live">LIVE</span><div><i data-toggle="modal"data-target="#editgame"class="icon-pencil"></i><i class="icon-cancel-button remove-game-slide"></i></div></div><div class="gametitle"><p>投票-大家希望情人節收到什麼</p></div><div class="emo"><div><img src="./封存/like.svg"alt="">玫瑰</div><div><img src="./封存/love.svg"alt="">百合</div><div><img src="./封存/haha.svg"alt="">房子</div><div><img src="./封存/wow.svg"alt="">奶嘴</div><div><img src="./封存/sad.svg"alt="">飛機</div><div><img src="./封存/angry.svg"alt="">車車</div></div></div');
+                }
+
+                swiperGame.update();
+                gameRemoveSlide();
+                timeclick();
+
             });
-            
+
 
 
 
@@ -1063,7 +978,7 @@
 
 
 
-                    $('.buttonarea > span').on('click', function () {
+            $('.buttonarea > span').on('click', function () {
                 $(this).removeClass('active').siblings('span').removeClass('active');
                 if ($(this).hasClass('spanone')) {
 
@@ -1135,46 +1050,46 @@
                 $(this).removeClass('hover');
             }
             );
-           
-            
-            
-            
+
+
+
+
             timeclick();
         });
 
         var timeclick = function () {
-                $('.productbox').on('click', function () {
+            $('.productbox').on('click', function () {
                 if ($('.timeend').css('display') == 'block') return false;
                 $('.productbox').removeClass('active');
                 $(this).addClass('active');
-                });
-                $('.timeopen').on('click', function () {
-                    if ($(this).css('display') == 'block') {
-                        $('.timeend').show();
-                        $('.productbox').click(function () {
-                            if ($(this).hasClass('active')) return false;
-                            $('.productbox').removeClass('active2');
-                            $(this).addClass('active2');
-                        });
-                    }
-                    $('.productbox.active').find('span').css('display', 'block');
-                });
-                $('.timeend').on('click', function () {
-                    if ($(this).css('display') == 'block') {
-                        $('.timeend').hide();
+            });
+            $('.timeopen').on('click', function () {
+                if ($(this).css('display') == 'block') {
+                    $('.timeend').show();
+                    $('.productbox').click(function () {
+                        if ($(this).hasClass('active')) return false;
                         $('.productbox').removeClass('active2');
-                    }
-                    $('.productbox.active').find('span').css('display', 'none');
-                });
-                $('.itembox').on('click', function () {
+                        $(this).addClass('active2');
+                    });
+                }
+                $('.productbox.active').find('span').css('display', 'block');
+            });
+            $('.timeend').on('click', function () {
+                if ($(this).css('display') == 'block') {
+                    $('.timeend').hide();
+                    $('.productbox').removeClass('active2');
+                }
+                $('.productbox.active').find('span').css('display', 'none');
+            });
+            $('.itembox').on('click', function () {
                 $('.itembox').removeClass('active');
                 $(this).addClass('active');
-                })
-                
-                $('.gamebox').on('click', function () {
-                    $('.gamebox').removeClass('gameline');
-                    $(this).addClass('gameline');
-                })
+            })
+
+            $('.gamebox').on('click', function () {
+                $('.gamebox').removeClass('gameline');
+                $(this).addClass('gameline');
+            })
         }
     </script>
     <script>
