@@ -20,11 +20,11 @@
   background-color: #fff;
 }
 
-.icon-warning {
+.icon-warning, .icon-mines {
   font-family: 'icomoon' !important;
 }
 
-.icon-warning .path1, .icon-warning .path2 {
+.icon-warning .path1, .icon-warning .path2, .icon-mines .path1, .icon-mines .path2 {
   font-family: 'icomoon' !important;
 }
 
@@ -131,6 +131,9 @@ p {
 .itemcontent {
   padding: 20px;
   overflow-y: auto;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .album {
@@ -543,5 +546,467 @@ p {
 .topinfo span {
   color: #747474;
   font-size: 14px;
+}
+
+.gamecon {
+  background-color: rgba(255, 255, 255, 0.79);
+  padding: 3vmin;
+  max-width: 50%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 30px;
+  bottom: 15%;
+}
+
+.gamecon .secret {
+  color: #585858;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.gamecon .game .giftbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.gamecon .game .giftbox img {
+  width: auto;
+  height: auto;
+}
+
+.gamecon .game p {
+  font-size: 1.5vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gamecon .vote p {
+  margin-top: 7vh;
+  margin-bottom: 4vh;
+}
+
+.gamecon .emoption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.gamecon .emoption p {
+  margin: 0;
+  color: #505050;
+  font-size: 1vw;
+}
+
+.gamecon .emoption div {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.gamecon .emoption div img {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: 5px;
+}
+
+.gamecon .bothead {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gamecon .bothead > div {
+  margin: 0 15px;
+}
+
+.gamecon .bothead .imgbox {
+  border-radius: 50%;
+  background: url("../imges/justin.png") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.gamecon .bothead span {
+  color: #585858;
+}
+
+.shoplist {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.shoplist > p {
+  color: #24253d;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.shoplist .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+.shoplist .item > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shoplist .item > div span {
+  margin: 0 10px;
+}
+
+.shoplist .item p, .shoplist .item span {
+  color: rgba(36, 37, 61, 0.5);
+  position: relative;
+}
+
+.shoplist .item .icon-mines {
+  cursor: pointer;
+}
+
+.shoplist .item .icon-mines .path1::before {
+  color: #ff7e7e;
+}
+
+.shoplist .item .icon-mines .path2 {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.total {
+  text-align: right;
+}
+
+.order {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fd5739;
+  border-radius: 8px;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.order:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#login .modal-content {
+  border-radius: 30px;
+}
+
+.login {
+  margin: 10px 80px 50px;
+}
+
+.memebertext {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px  solid #979797;
+  margin-bottom: 40px;
+}
+
+.memebertext h3 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.memebertext span {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+.memebertext a {
+  text-decoration: none;
+  color: #f0c018;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.logininput {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.logininput p {
+  font-size: 14px;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+}
+
+.logininput input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #eaeaea;
+  height: 50px;
+  padding: 15px;
+}
+
+.remeber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.remeber span {
+  font-size: 12px;
+}
+
+.loginbutton {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 35px;
+  width: 200px;
+  height: 50px;
+  background-color: #ff9620;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.otherlogin {
+  padding-top: 30px;
+  border-top: 1px solid #979797;
+}
+
+.otherlogin > div {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  color: white;
+}
+
+.otherlogin > div:nth-of-type(1) {
+  background-color: #00b902;
+}
+
+.otherlogin > div:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 1px;
+  background: #000;
+  right: -3px;
+  bottom: -3px;
+}
+
+.otherlogin > div:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 5px;
+  background: #000;
+  right: -3px;
+  bottom: -3px;
+}
+
+.otherlogin > div:nth-of-type(2) {
+  background-color: #3e5a98;
+}
+
+.otherlogin > div:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 1px;
+  background: #000;
+  right: -3px;
+  bottom: -3px;
+}
+
+.otherlogin > div:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 5px;
+  background: #000;
+  right: -3px;
+  bottom: -3px;
+}
+
+.otherlogin .span1 {
+  position: absolute;
+  height: 1px;
+  width: 5px;
+  left: -3px;
+  top: -3px;
+  background-color: #000;
+}
+
+.otherlogin .span2 {
+  position: absolute;
+  height: 5px;
+  width: 1px;
+  left: -3px;
+  top: -3px;
+  background-color: #000;
+}
+
+#check .modal-content {
+  border-radius: 30px;
+}
+
+.checklist {
+  margin: 20px 50px;
+}
+
+.checklist > p:first-of-type {
+  margin-bottom: 10px;
+  font-size: 1.2vw;
+}
+
+.checklist .shoplist {
+  padding: 10px;
+}
+
+.checklist .pay > p:first-of-type, .checklist .free > p:first-of-type {
+  color: #24253d;
+  font-size: 1.2vw;
+  margin-bottom: 10px;
+}
+
+.checklist .paybox, .checklist .freebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.checklist .paybox > div, .checklist .freebox > div {
+  border: 1px solid #dbdbdb;
+  color: #000;
+  padding: 10px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  width: 100%;
+  margin: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checklist .paybox > div.active, .checklist .freebox > div.active {
+  border-color: #fd5739;
+}
+
+.checklist .tip {
+  color: rgba(36, 37, 61, 0.47);
+  font-size: 13px;
+  display: block;
+}
+
+.checklist .nextpage {
+  margin-top: 20px;
+  display: block;
+  background-color: #fd5739;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.checklist .nextpage:hover {
+  text-decoration: none;
+}
+
+#info .modal-content {
+  border-radius: 30px;
+}
+
+.info {
+  margin: 0 30px;
+}
+
+.info > p:first-of-type {
+  margin-bottom: 15px;
+  font-size: 2vw;
 }
 /*# sourceMappingURL=buypart.css.map */

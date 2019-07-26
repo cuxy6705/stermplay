@@ -554,7 +554,7 @@ select{
     
     .swiper-slide{
         width: 100%;
-        max-width: 200px;
+        max-width: 170px;
         height: auto!important;
     }
     position: relative;
@@ -645,6 +645,7 @@ select{
     position: relative;
     i{
         font-size: 20px;
+        margin: 0 2.5px;
     }
     span{
         display: inline-block;

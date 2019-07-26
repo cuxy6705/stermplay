@@ -329,10 +329,10 @@
                                         <p>計時器</p>
 
                                         <div class="enable">
-                                            <input class="enable right" max="59" type="number" value="00"
+                                            <input class="enable right" max="59" maxlength="2" type="number" value="00"
                                                 onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                                             :
-                                            <input class="enable" type="number" max="59" value="00"
+                                            <input class="enable" type="number" maxlength="2" max="59" value="00"
                                                 onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                                         </div>
 
@@ -577,8 +577,8 @@
                     <div class="t6"></div>
 
                     <div class="mainbutton">
-                        <div>快速上架</div>
-                        <div>確認</div>
+                        <div data-dismiss="modal" >快速上架</div>
+                        <div data-dismiss="modal" class="append-slide2">確認</div>
                     </div>
                 </div>
             </div>
@@ -672,10 +672,10 @@
             <div class="option">
                 <p>計時器</p>
                 <div class="optiontimecount">
-                    <input class="optiontimecount right" max="59" type="number" value="00"
+                    <input class="optiontimecount right" max="59" type="number" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                     <span>:</span>
-                    <input class="optiontimecount" type="number" max="59" value="00"
+                    <input class="optiontimecount" type="number" max="59" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                 </div>
             </div>
@@ -709,10 +709,10 @@
             <div class="option">
                 <p>計時器</p>
                 <div class="optiontimecount">
-                    <input class="optiontimecount right" max="59" type="number" value="00"
+                    <input class="optiontimecount right" max="59" type="number" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                     <span>:</span>
-                    <input class="optiontimecount" type="number" max="59" value="00"
+                    <input class="optiontimecount" type="number" max="59" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                 </div>
             </div>
@@ -748,10 +748,10 @@
             <div class="option">
                 <p>倒數計時器</p>
                 <div class="optiontimecount">
-                    <input class="optiontimecount right" max="59" type="number" value="00"
+                    <input class="optiontimecount right" max="59" type="number" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                     <span>:</span>
-                    <input class="optiontimecount" type="number" max="59" value="00"
+                    <input class="optiontimecount" type="number" max="59" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                 </div>
             </div>
@@ -810,10 +810,10 @@
             <div class="option">
                 <p>計時器</p>
                 <div class="optiontimecount">
-                    <input class="optiontimecount right" max="59" type="number" value="00"
+                    <input class="optiontimecount right" max="59" type="number" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                     <span>:</span>
-                    <input class="optiontimecount" type="number" max="59" value="00"
+                    <input class="optiontimecount" type="number" max="59" maxlength="2" value="00"
                         onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
                 </div>
             </div>
@@ -875,7 +875,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
     <script>
         let index = 0;
-        let gameindex = 0;
         $(document).ready(function () {
 
             var swiperProduct = new Swiper('.swiper-product', {
@@ -900,12 +899,7 @@
                 slidesPerView: 'auto',
                 spaceBetween: 20,
                 disabledClass: 'my-button-disabled',
-                on: {
-                    click: function () {
-                        gameindex = this.clickedIndex;
-                        console.log(gameindex);
-                    }
-                },
+      
                 navigation: {
 
                     nextEl: '.t4',
@@ -914,7 +908,11 @@
             })
 
             document.querySelector('.append-slide').addEventListener('click', function (e) {
-                e.preventDefault();
+                swiperProduct.addSlide(1, '<div class="productbox swiper-slide"><div class="imgbox"><span>ON AIR</span></div><div class="contentbox"><p class="contenttitle">小綠花</p><div><p>直播價格:</p><span>$1200</span></div><div><p>販售數量:</p><span>30/10</span></div></div></div>');
+                swiperProduct.update();
+                timeclick();
+            });
+            document.querySelector('.append-slide2').addEventListener('click', function (e) {
                 swiperProduct.addSlide(1, '<div class="productbox swiper-slide"><div class="imgbox"><span>ON AIR</span></div><div class="contentbox"><p class="contenttitle">小綠花</p><div><p>直播價格:</p><span>$1200</span></div><div><p>販售數量:</p><span>30/10</span></div></div></div>');
                 swiperProduct.update();
                 timeclick();
@@ -923,19 +921,26 @@
                 console.log(index);
                 swiperProduct.removeSlide(index);
             });
+            $(document).on('click' , '.remove-game-slide' , function(e){
+                 $(this).closest('.gamebox').remove();
+                swiperGame.update();
+            })
+            // function gameRemoveSlide() {
+            //     document.getElementsByClassName('remove-game-slide')
+            //     $(document).on('click' , '.gameline',function(){
+            //         test();
+            //          if ($(this).closest('gameline')) {
+            //             console.log(gameindex);
+            //             test(gameindex);
 
-            function gameRemoveSlide() {
-                $('.icon-cancel-button').on('click', function () {
-                    if ($(this).closest('gameline')) {
-                        console.log(gameindex);
-                        test(gameindex);
+            //         }
+            //     })
+            // } gameRemoveSlide();
+            // function test(id) {
+            //       console.log(id);
 
-                    }
-                })
-            } gameRemoveSlide();
-            function test(id) {
-                swiperGame.removeSlide(id);
-            }
+            //     return false;
+            // }
 
             document.querySelector('.app-slide').addEventListener('click', function (e) {
 
@@ -952,7 +957,6 @@
                 }
 
                 swiperGame.update();
-                gameRemoveSlide();
                 timeclick();
 
             });
@@ -1057,6 +1061,10 @@
             timeclick();
         });
 
+
+        let maxnumber = function(len){
+            console.log(len);
+        }
         var timeclick = function () {
             $('.productbox').on('click', function () {
                 if ($('.timeend').css('display') == 'block') return false;
